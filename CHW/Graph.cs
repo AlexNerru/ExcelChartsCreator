@@ -15,6 +15,7 @@ namespace CHW
 		private DataTable _table;
 		private int _indexX;
 		private int _indexY;
+
 		Dictionary<string, System.Windows.Forms.DataVisualization.Charting.SeriesChartType> graphNames
 			= new Dictionary<string, System.Windows.Forms.DataVisualization.Charting.SeriesChartType>()
 			{
@@ -48,18 +49,18 @@ namespace CHW
 			chart.ChartAreas[0].CursorX.IsUserEnabled = true;
 			chart.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
 			chart.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
-			chart.ChartAreas[0].AxisX.ScrollBar.IsPositionedInside = true;
+			//chart.ChartAreas[0].AxisX.ScrollBar.IsPositionedInside = true;
 			chart.ChartAreas[0].CursorY.IsUserEnabled = true;
 			chart.ChartAreas[0].CursorY.IsUserSelectionEnabled = true;
 			chart.ChartAreas[0].AxisY.ScaleView.Zoomable = true;
-			chart.ChartAreas[0].AxisY.ScrollBar.IsPositionedInside = true;
+			//chart.ChartAreas[0].AxisY.ScrollBar.IsPositionedInside = true;
+			
 			chart.Series[0].Name = $"Зависимость {_table.Columns[_indexX].ColumnName} от {_table.Columns[_indexY].ColumnName}";
 
 			foreach (var graphName in graphNames.Keys)
 				graphTypeBox.Items.Add(graphName);
 			foreach (var graphColor in graphColors.Keys)
 				graphColorBox.Items.Add(graphColor);
-
 			DrawGraph();
 			
 
@@ -85,12 +86,19 @@ namespace CHW
 			DrawGraph(); 
 		}
 
-		private void DrawGraph ()
+		private void DrawGraph()
 		{
 			chart.Series[0].Sort(System.Windows.Forms.DataVisualization.Charting.PointSortOrder.Descending);
+			DataView view = new DataView(_table);
+			view.Sort = _table.Columns[_indexX].ColumnName + " ASC";
+			_table = view.ToTable();
+
 			foreach (DataRow dataRow in _table.Rows)
+			{
 				chart.Series[0].Points.AddXY(dataRow[_indexX], dataRow[_indexY]);
-			
+				Console.WriteLine(dataRow[_indexX].GetType());
+			}
+
 		}
 	}
 	}

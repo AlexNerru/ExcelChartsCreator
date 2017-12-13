@@ -79,8 +79,6 @@ namespace CHW
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			string filePath = string.Empty;
-			string fileExt = string.Empty;
 			openFileDialog1.Filter = "Excel Files| *.xls; *.xlsx";
 			openFileDialog1.ShowDialog();
 		}

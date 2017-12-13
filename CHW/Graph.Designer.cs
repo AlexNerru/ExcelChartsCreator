@@ -35,24 +35,28 @@
 			this.buttonCloseGraph = new System.Windows.Forms.Button();
 			this.graphTypeBox = new System.Windows.Forms.ListBox();
 			this.graphColorBox = new System.Windows.Forms.ListBox();
+			this.trackBar1 = new System.Windows.Forms.TrackBar();
 			((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// chart
 			// 
+			chartArea1.BackColor = System.Drawing.Color.White;
 			chartArea1.Name = "ChartArea1";
 			this.chart.ChartAreas.Add(chartArea1);
 			legend1.Name = "Legend1";
 			this.chart.Legends.Add(legend1);
-			this.chart.Location = new System.Drawing.Point(12, 261);
+			this.chart.Location = new System.Drawing.Point(21, 307);
 			this.chart.Name = "chart";
 			this.chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
 			series1.ChartArea = "ChartArea1";
 			series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Kagi;
 			series1.Legend = "Legend1";
 			series1.Name = "Series1";
+			series1.YValuesPerPoint = 5;
 			this.chart.Series.Add(series1);
-			this.chart.Size = new System.Drawing.Size(3784, 1764);
+			this.chart.Size = new System.Drawing.Size(3741, 1550);
 			this.chart.TabIndex = 0;
 			this.chart.Text = "chart";
 			// 
@@ -96,6 +100,14 @@
 			this.graphColorBox.TabIndex = 14;
 			this.graphColorBox.SelectedIndexChanged += new System.EventHandler(this.graphColorBox_SelectedIndexChanged);
 			// 
+			// trackBar1
+			// 
+			this.trackBar1.Location = new System.Drawing.Point(82, 1885);
+			this.trackBar1.Maximum = 100;
+			this.trackBar1.Name = "trackBar1";
+			this.trackBar1.Size = new System.Drawing.Size(3691, 114);
+			this.trackBar1.TabIndex = 15;
+			// 
 			// Graph
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(240F, 240F);
@@ -103,6 +115,7 @@
 			this.AutoSize = true;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.ClientSize = new System.Drawing.Size(3808, 2072);
+			this.Controls.Add(this.trackBar1);
 			this.Controls.Add(this.graphColorBox);
 			this.Controls.Add(this.graphTypeBox);
 			this.Controls.Add(this.buttonCloseGraph);
@@ -112,6 +125,7 @@
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.Graph_Load);
 			((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -123,5 +137,6 @@
 		private System.Windows.Forms.Button buttonCloseGraph;
 		private System.Windows.Forms.ListBox graphTypeBox;
 		private System.Windows.Forms.ListBox graphColorBox;
+		private System.Windows.Forms.TrackBar trackBar1;
 	}
 }
