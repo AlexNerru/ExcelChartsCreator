@@ -16,59 +16,72 @@ namespace CHW
 {
 	public partial class Form1 : Form
 	{
-		private int counter = 0;
-		private const int GREETINGS_TICK_TIME = 1000;
-
+		private DataTable _table;
+		private readonly string GREETINGS_LABEL_TEXT;
+		Random rand = new Random();
 
 		public Form1()
 		{
 			InitializeComponent();
+			GREETINGS_LABEL_TEXT = label1.Text;
 		}
 
 		private void ChangeMenuState(bool state)
 		{
-			button1.Visible = state;
+			buttonClose.Visible = state;
 			button2.Visible = state;
 			button3.Visible = state;
 		}
 
+		private void ChangeGraphMenuStatus (bool state)
+		{
+			button4.Visible = state;
+			listBox1.Visible = state;
+			label3.Visible = state;
+			listBox2.Visible = state;
+			buttonDraw.Visible = state;
+			buttonHelp2.Visible = state;
+		}
+
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			timer1.Enabled = false;  // таймер включен
-			timer2.Interval = GREETINGS_TICK_TIME;
-			timer2.Enabled = true;
-			ChangeMenuState(false);			
+			timer2.Enabled = true;  // таймер включен
+			timer2.Interval = 100;
+			ChangeMenuState(false);
+			ChangeGraphMenuStatus(false);
+			label1.Text = String.Empty;
 		}
 
 		private void timer1_Tick(object sender, EventArgs e)
 		{
-				string temp = label1.Text;
-				if (temp.Length > 0)
-					label1.Text = temp.Substring(0, temp.Length - 1);
-				else
-				{
-					timer1.Enabled = false;
-					ChangeMenuState(true);
-				}
-		}	
+
+			if (label1.Text.Length < GREETINGS_LABEL_TEXT.Length)
+			{
+				label1.Text = GREETINGS_LABEL_TEXT.Substring(0, label1.Text.Length + 1);
+				timer2.Interval= rand.Next(50, 150);
+			}
+			else
+			{
+				timer2.Enabled = false;
+				label1.Visible = false;
+				ChangeMenuState(true);
+			}
+		}
+
 		
 
-		private void button1_Click(object sender, EventArgs e)
+
+		private void buttonClose_Click(object sender, EventArgs e)
 		{
 			this.Close();
 		}
-
-		private void timer2_Tick(object sender, EventArgs e)
-		{
-				timer2.Enabled = false;
-				timer1.Enabled = true;
-		}
+		
 
 		private void button2_Click(object sender, EventArgs e)
 		{
 			string filePath = string.Empty;
 			string fileExt = string.Empty;
-			openFileDialog1.Filter = "Excel Files| *.xls; *.xlsx; *.xlsm";
+			openFileDialog1.Filter = "Excel Files| *.xls; *.xlsx";
 			openFileDialog1.ShowDialog();
 		}
 
@@ -78,38 +91,112 @@ namespace CHW
 			string fileExt = string.Empty;
 			try
 			{
-				filePath = openFileDialog1.FileName; //get the path of the file  
-				fileExt = Path.GetExtension(filePath); //get the file extension  
+				filePath = openFileDialog1.FileName;  
+				fileExt = Path.GetExtension(filePath); 
 				if (fileExt.CompareTo(".xls") == 0 || fileExt.CompareTo(".xlsx") == 0)
 				{
-					LoadFile(filePath);
+
+					List<string> numericColumnsNames = new List<string>();
+					numericColumnsNames = LoadFile(filePath);
+					foreach (var columnName in numericColumnsNames)
+					{
+						listBox1.Items.Add(columnName);
+						listBox2.Items.Add(columnName);
+					}
+
 				}
+
 			}
 			catch (Exception ex)
 			{
 				MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
 			}
+		}
 
-			private void LoadFile(string filePath)
+
+		private List<string> LoadFile(string filePath)
+		{
+			System.Data.OleDb.OleDbConnection MyConnection;
+			System.Data.DataSet DtSet;
+			System.Data.OleDb.OleDbDataAdapter MyCommand;
+			MyConnection = new System.Data.OleDb.OleDbConnection("provider=Microsoft.Jet.OLEDB.4.0;" +
+				$"Data Source='{filePath}';Extended Properties=Excel 8.0;");
+			// :TODO Сделать, чтобы был выбор листа
+			MyCommand = new System.Data.OleDb.OleDbDataAdapter("select * from [Worksheet$]", MyConnection);
+			DtSet = new System.Data.DataSet();
+			MyCommand.Fill(DtSet);			
+			_table = DtSet.Tables[0];
+			Data dataForm = new Data(DtSet.Tables[0]);
+			ChangeMenuState(false);
+			ChangeGraphMenuStatus(true);
+			dataForm.Show();
+			MyConnection.Close();
+			
+			return GetNumericColumnsNames(DtSet.Tables[0]);
+			
+		}
+
+		private List<string> GetNumericColumnsNames (DataTable dataTable)
+		{
+			List<string> names = new List<string>();
+			foreach (DataColumn dataColumn in dataTable.Columns)
 			{
-				System.Data.OleDb.OleDbConnection MyConnection;
-				System.Data.DataSet DtSet;
-				System.Data.OleDb.OleDbDataAdapter MyCommand;
-				MyConnection = new System.Data.OleDb.OleDbConnection("provider=Microsoft.Jet.OLEDB.4.0;" +
-					$"Data Source='{filePath}';Extended Properties=Excel 8.0;");
-				// :TODO Сделать, чтобы был выбор листа
-				MyCommand = new System.Data.OleDb.OleDbDataAdapter("select * from [Worksheet$]", MyConnection);
-				DtSet = new System.Data.DataSet();
-				//this.ShowDialog 
-				MyCommand.Fill(DtSet);
-				dataGridView1.DataSource = DtSet.Tables[0];
-				button1.Visible = false;
-				button2.Visible = false;
-				button3.Visible = false;
-				dataGridView1.Visible = true;
-				MyConnection.Close();
+				if (IsNumericType(dataColumn.DataType))
+				{
+					names.Add(dataColumn.ColumnName);
+				}
+			}
+			return names;
+
+		}
+
+		private bool IsNumericType(Type type)
+		{
+
+			switch (Type.GetTypeCode(type))
+			{
+				case TypeCode.Byte:
+				case TypeCode.SByte:
+				case TypeCode.UInt16:
+				case TypeCode.UInt32:
+				case TypeCode.UInt64:
+				case TypeCode.Int16:
+				case TypeCode.Int32:
+				case TypeCode.Int64:
+				case TypeCode.Decimal:
+				case TypeCode.Double:
+				case TypeCode.Single:
+					return true;
+				default:
+					return false;
 			}
 		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			ChangeGraphMenuStatus(false);
+			ChangeMenuState(true);
+		}
+
+		private void buttonDraw_Click(object sender, EventArgs e)
+		{
+			int indexX, indexY;
+
+			if (listBox1.Text != listBox2.Text)
+			{
+				indexX = _table.Columns[listBox1.Text].Ordinal;
+				indexY = _table.Columns[listBox2.Text].Ordinal;
+				Graph graph = new Graph(_table,indexX,indexY);
+				graph.Show();
+			}
+			else
+			{
+				MessageBox.Show("Вы выбрали два одинаковых столбца");
+			}
+
+		}
+		
 	}
 }
+
 
