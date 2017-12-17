@@ -2,7 +2,6 @@ C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\bin\Debug\CHW.exe.config
 C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\bin\Debug\CHW.exe
 C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\bin\Debug\CHW.pdb
 C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\obj\Debug\CHW.csprojResolveAssemblyReference.cache
-C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\obj\Debug\CHW.Form1.resources
 C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\obj\Debug\CHW.Properties.Resources.resources
 C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\obj\Debug\CHW.csproj.GenerateResource.Cache
 C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\obj\Debug\CHW.csproj.CoreCompileInputs.cache
@@ -11,3 +10,4 @@ C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\obj\Debug\CHW.pdb
 C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\obj\Debug\CHW.csproj.ResolveComReference.cache
 C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\obj\Debug\CHW.Data.resources
 C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\obj\Debug\CHW.Graph.resources
+C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\obj\Debug\CHW.MainForm.resources

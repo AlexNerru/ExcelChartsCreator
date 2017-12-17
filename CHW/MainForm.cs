@@ -14,13 +14,13 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace CHW
 {
-	public partial class Form1 : Form
+	public partial class MainForm : Form
 	{
-		private DataTable _table;
+		private DataTable _table; 
 		private readonly string GREETINGS_LABEL_TEXT;
 		Random rand = new Random();
 
-		public Form1()
+		public MainForm()
 		{
 			InitializeComponent();
 			GREETINGS_LABEL_TEXT = label1.Text;
@@ -29,40 +29,40 @@ namespace CHW
 		private void ChangeMenuState(bool state)
 		{
 			buttonClose.Visible = state;
-			button2.Visible = state;
+			buttonOpen.Visible = state;
 			button3.Visible = state;
+			
 		}
 
 		private void ChangeGraphMenuStatus (bool state)
 		{
-			button4.Visible = state;
-			listBox1.Visible = state;
+			buttonMenu.Visible = state;
+			listBoxX.Visible = state;
 			label3.Visible = state;
-			listBox2.Visible = state;
+			listBoxY.Visible = state;
 			buttonDraw.Visible = state;
-			buttonHelp2.Visible = state;
 		}
 
-		private void Form1_Load(object sender, EventArgs e)
+		private void MainForm_Load(object sender, EventArgs e)
 		{
-			timer2.Enabled = true;  // таймер включен
-			timer2.Interval = 100;
+			timer.Enabled = true;  // таймер включен
+			timer.Interval = 100;
 			ChangeMenuState(false);
 			ChangeGraphMenuStatus(false);
 			label1.Text = String.Empty;
 		}
 
-		private void timer1_Tick(object sender, EventArgs e)
+		private void timer_Tick(object sender, EventArgs e)
 		{
 
 			if (label1.Text.Length < GREETINGS_LABEL_TEXT.Length)
 			{
 				label1.Text = GREETINGS_LABEL_TEXT.Substring(0, label1.Text.Length + 1);
-				timer2.Interval= rand.Next(50, 150);
+				timer.Interval= rand.Next(50, 150);
 			}
 			else
 			{
-				timer2.Enabled = false;
+				timer.Enabled = false;
 				label1.Visible = false;
 				ChangeMenuState(true);
 			}
@@ -77,19 +77,21 @@ namespace CHW
 		}
 		
 
-		private void button2_Click(object sender, EventArgs e)
+		private void buttonOpen_Click(object sender, EventArgs e)
 		{
-			openFileDialog1.Filter = "Excel Files| *.xls; *.xlsx";
-			openFileDialog1.ShowDialog();
+			openFileDialog.Filter = "Excel Files| *.xls; *.xlsx";
+			openFileDialog.ShowDialog();
 		}
 
-		private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+		private void openFileDialog_FileOk(object sender, CancelEventArgs e)
 		{
+			listBoxX.Items.Clear();
+			listBoxY.Items.Clear();
 			string filePath = string.Empty;
 			string fileExt = string.Empty;
 			try
 			{
-				filePath = openFileDialog1.FileName;  
+				filePath = openFileDialog.FileName;  
 				fileExt = Path.GetExtension(filePath); 
 				if (fileExt.CompareTo(".xls") == 0 || fileExt.CompareTo(".xlsx") == 0)
 				{
@@ -98,8 +100,8 @@ namespace CHW
 					numericColumnsNames = LoadFile(filePath);
 					foreach (var columnName in numericColumnsNames)
 					{
-						listBox1.Items.Add(columnName);
-						listBox2.Items.Add(columnName);
+						listBoxX.Items.Add(columnName);
+						listBoxY.Items.Add(columnName);
 					}
 
 				}
@@ -107,7 +109,7 @@ namespace CHW
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+				MessageBox.Show("Ошибка! Не удалось прочитать файл: " + ex.Message);
 			}
 		}
 
@@ -170,7 +172,7 @@ namespace CHW
 			}
 		}
 
-		private void button4_Click(object sender, EventArgs e)
+		private void buttonToMenu_Click(object sender, EventArgs e)
 		{
 			ChangeGraphMenuStatus(false);
 			ChangeMenuState(true);
@@ -180,19 +182,36 @@ namespace CHW
 		{
 			int indexX, indexY;
 
-			if (listBox1.Text != listBox2.Text)
+			if (listBoxX.Text != listBoxY.Text)
 			{
-				indexX = _table.Columns[listBox1.Text].Ordinal;
-				indexY = _table.Columns[listBox2.Text].Ordinal;
+				indexX = _table.Columns[listBoxX.Text].Ordinal;
+				indexY = _table.Columns[listBoxY.Text].Ordinal;
 				Graph graph = new Graph(_table,indexX,indexY);
 				graph.Show();
 			}
 			else
 			{
-				MessageBox.Show("Вы выбрали два одинаковых столбца");
+				MessageBox.Show("Вы выбрали два одинаковых столбца!");
 			}
 
 		}
+
+		private void buttonHelp_Click(object sender, EventArgs e)
+		{
+			ChangeGraphMenuStatus(false);
+			ChangeMenuState(false);
+			labelHelp.Visible = true;
+			buttonHelpToMenu.Visible = true;
+		}
+
+		private void buttonHelpToMenu_Click(object sender, EventArgs e)
+		{
+			labelHelp.Visible = false;
+			ChangeGraphMenuStatus(false);
+			ChangeMenuState(true);
+			buttonHelpToMenu.Visible = false;
+		}
+
 		
 	}
 }

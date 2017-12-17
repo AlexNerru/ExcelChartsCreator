@@ -28,9 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
 			this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.buttonCloseGraph = new System.Windows.Forms.Button();
 			this.graphTypeBox = new System.Windows.Forms.ListBox();
@@ -42,20 +42,20 @@
 			// 
 			// chart
 			// 
-			chartArea1.BackColor = System.Drawing.Color.White;
-			chartArea1.Name = "ChartArea1";
-			this.chart.ChartAreas.Add(chartArea1);
-			legend1.Name = "Legend1";
-			this.chart.Legends.Add(legend1);
+			chartArea3.BackColor = System.Drawing.Color.White;
+			chartArea3.Name = "ChartArea1";
+			this.chart.ChartAreas.Add(chartArea3);
+			legend3.Name = "Legend1";
+			this.chart.Legends.Add(legend3);
 			this.chart.Location = new System.Drawing.Point(21, 307);
 			this.chart.Name = "chart";
 			this.chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-			series1.ChartArea = "ChartArea1";
-			series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Kagi;
-			series1.Legend = "Legend1";
-			series1.Name = "Series1";
-			series1.YValuesPerPoint = 5;
-			this.chart.Series.Add(series1);
+			series3.ChartArea = "ChartArea1";
+			series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+			series3.Legend = "Legend1";
+			series3.Name = "Series1";
+			series3.YValuesPerPoint = 5;
+			this.chart.Series.Add(series3);
 			this.chart.Size = new System.Drawing.Size(3741, 1550);
 			this.chart.TabIndex = 0;
 			this.chart.Text = "chart";
@@ -102,11 +102,14 @@
 			// 
 			// trackBar1
 			// 
-			this.trackBar1.Location = new System.Drawing.Point(82, 1885);
-			this.trackBar1.Maximum = 100;
+			this.trackBar1.Location = new System.Drawing.Point(45, 1893);
+			this.trackBar1.Maximum = 11;
+			this.trackBar1.Minimum = 1;
 			this.trackBar1.Name = "trackBar1";
 			this.trackBar1.Size = new System.Drawing.Size(3691, 114);
 			this.trackBar1.TabIndex = 15;
+			this.trackBar1.Value = 1;
+			this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
 			// 
 			// Graph
 			// 

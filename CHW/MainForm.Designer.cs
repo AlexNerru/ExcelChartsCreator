@@ -1,6 +1,6 @@
 ﻿namespace CHW
 {
-	partial class Form1
+	partial class MainForm
 	{
 		/// <summary>
 		/// Обязательная переменная конструктора.
@@ -29,24 +29,26 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			this.timer2 = new System.Windows.Forms.Timer(this.components);
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+			this.timer = new System.Windows.Forms.Timer(this.components);
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.buttonClose = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
+			this.buttonOpen = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
-			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-			this.button4 = new System.Windows.Forms.Button();
-			this.listBox1 = new System.Windows.Forms.ListBox();
-			this.listBox2 = new System.Windows.Forms.ListBox();
+			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+			this.buttonMenu = new System.Windows.Forms.Button();
+			this.listBoxX = new System.Windows.Forms.ListBox();
+			this.listBoxY = new System.Windows.Forms.ListBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.buttonDraw = new System.Windows.Forms.Button();
-			this.buttonHelp2 = new System.Windows.Forms.Button();
+			this.labelHelp = new System.Windows.Forms.Label();
+			this.buttonHelpToMenu = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// timer2
 			// 
-			this.timer2.Tick += new System.EventHandler(this.timer1_Tick);
+			this.timer.Tick += new System.EventHandler(this.timer_Tick);
 			// 
 			// label1
 			// 
@@ -81,74 +83,75 @@
 			this.buttonClose.UseVisualStyleBackColor = false;
 			this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
 			// 
-			// button2
+			// buttonOpen
 			// 
-			this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.button2.Font = new System.Drawing.Font("Segoe Script", 21.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.button2.Location = new System.Drawing.Point(1618, 409);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(656, 230);
-			this.button2.TabIndex = 4;
-			this.button2.Text = "Открыть!";
-			this.button2.UseVisualStyleBackColor = false;
-			this.button2.Click += new System.EventHandler(this.button2_Click);
+			this.buttonOpen.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.buttonOpen.Font = new System.Drawing.Font("Segoe Script", 21.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.buttonOpen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.buttonOpen.Location = new System.Drawing.Point(1618, 409);
+			this.buttonOpen.Name = "buttonOpen";
+			this.buttonOpen.Size = new System.Drawing.Size(656, 230);
+			this.buttonOpen.TabIndex = 4;
+			this.buttonOpen.Text = "Открыть!";
+			this.buttonOpen.UseVisualStyleBackColor = false;
+			this.buttonOpen.Click += new System.EventHandler(this.buttonOpen_Click);
 			// 
 			// button3
 			// 
 			this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.button3.Font = new System.Drawing.Font("Segoe Script", 21.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.button3.Location = new System.Drawing.Point(1618, 817);
+			this.button3.Location = new System.Drawing.Point(1618, 801);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(656, 230);
 			this.button3.TabIndex = 5;
 			this.button3.Text = "На помощь!";
 			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Click += new System.EventHandler(this.buttonHelp_Click);
 			// 
 			// openFileDialog1
 			// 
-			this.openFileDialog1.FileName = "openFileDialog1";
-			this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+			this.openFileDialog.FileName = "openFileDialog1";
+			this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_FileOk);
 			// 
-			// button4
+			// buttonMenu
 			// 
-			this.button4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.button4.Font = new System.Drawing.Font("Segoe Script", 21.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.button4.Location = new System.Drawing.Point(1618, 1391);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(656, 230);
-			this.button4.TabIndex = 6;
-			this.button4.Text = "В меню!";
-			this.button4.UseVisualStyleBackColor = false;
-			this.button4.Click += new System.EventHandler(this.button4_Click);
+			this.buttonMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.buttonMenu.Font = new System.Drawing.Font("Segoe Script", 21.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.buttonMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.buttonMenu.Location = new System.Drawing.Point(1618, 1391);
+			this.buttonMenu.Name = "buttonMenu";
+			this.buttonMenu.Size = new System.Drawing.Size(656, 230);
+			this.buttonMenu.TabIndex = 6;
+			this.buttonMenu.Text = "В меню!";
+			this.buttonMenu.UseVisualStyleBackColor = false;
+			this.buttonMenu.Click += new System.EventHandler(this.buttonToMenu_Click);
 			// 
-			// listBox1
+			// listBoxX
 			// 
-			this.listBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-			this.listBox1.Font = new System.Drawing.Font("Segoe Script", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.listBox1.ForeColor = System.Drawing.SystemColors.Menu;
-			this.listBox1.FormattingEnabled = true;
-			this.listBox1.ItemHeight = 84;
-			this.listBox1.Location = new System.Drawing.Point(961, 251);
-			this.listBox1.Name = "listBox1";
-			this.listBox1.Size = new System.Drawing.Size(620, 256);
-			this.listBox1.TabIndex = 8;
-			this.listBox1.Visible = false;
+			this.listBoxX.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+			this.listBoxX.Font = new System.Drawing.Font("Segoe Script", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.listBoxX.ForeColor = System.Drawing.SystemColors.Menu;
+			this.listBoxX.FormattingEnabled = true;
+			this.listBoxX.ItemHeight = 84;
+			this.listBoxX.Location = new System.Drawing.Point(961, 251);
+			this.listBoxX.Name = "listBoxX";
+			this.listBoxX.Size = new System.Drawing.Size(620, 256);
+			this.listBoxX.TabIndex = 8;
+			this.listBoxX.Visible = false;
 			// 
-			// listBox2
+			// listBoxY
 			// 
-			this.listBox2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-			this.listBox2.Font = new System.Drawing.Font("Segoe Script", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.listBox2.ForeColor = System.Drawing.SystemColors.Menu;
-			this.listBox2.FormattingEnabled = true;
-			this.listBox2.ItemHeight = 84;
-			this.listBox2.Location = new System.Drawing.Point(2300, 266);
-			this.listBox2.Name = "listBox2";
-			this.listBox2.Size = new System.Drawing.Size(801, 256);
-			this.listBox2.TabIndex = 9;
-			this.listBox2.Visible = false;
+			this.listBoxY.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+			this.listBoxY.Font = new System.Drawing.Font("Segoe Script", 15.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.listBoxY.ForeColor = System.Drawing.SystemColors.Menu;
+			this.listBoxY.FormattingEnabled = true;
+			this.listBoxY.ItemHeight = 84;
+			this.listBoxY.Location = new System.Drawing.Point(2300, 266);
+			this.listBoxY.Name = "listBoxY";
+			this.listBoxY.Size = new System.Drawing.Size(801, 256);
+			this.listBoxY.TabIndex = 9;
+			this.listBoxY.Visible = false;
 			// 
 			// label3
 			// 
@@ -176,41 +179,57 @@
 			this.buttonDraw.Visible = false;
 			this.buttonDraw.Click += new System.EventHandler(this.buttonDraw_Click);
 			// 
-			// buttonHelp2
+			// label4
 			// 
-			this.buttonHelp2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.buttonHelp2.Font = new System.Drawing.Font("Segoe Script", 21.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.buttonHelp2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.buttonHelp2.Location = new System.Drawing.Point(1618, 1012);
-			this.buttonHelp2.Name = "buttonHelp2";
-			this.buttonHelp2.Size = new System.Drawing.Size(656, 230);
-			this.buttonHelp2.TabIndex = 12;
-			this.buttonHelp2.Text = "На помощь!";
-			this.buttonHelp2.UseVisualStyleBackColor = false;
+			this.labelHelp.AutoSize = true;
+			this.labelHelp.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.labelHelp.Font = new System.Drawing.Font("Segoe Print", 24.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelHelp.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.labelHelp.Location = new System.Drawing.Point(78, 60);
+			this.labelHelp.Name = "label4";
+			this.labelHelp.Size = new System.Drawing.Size(3431, 2320);
+			this.labelHelp.TabIndex = 13;
+			this.labelHelp.Text = resources.GetString("label4.Text");
+			this.labelHelp.Visible = false;
 			// 
-			// Form1
+			// button1
+			// 
+			this.buttonHelpToMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.buttonHelpToMenu.Font = new System.Drawing.Font("Segoe Script", 21.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.buttonHelpToMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.buttonHelpToMenu.Location = new System.Drawing.Point(2968, 1741);
+			this.buttonHelpToMenu.Name = "button1";
+			this.buttonHelpToMenu.Size = new System.Drawing.Size(656, 230);
+			this.buttonHelpToMenu.TabIndex = 14;
+			this.buttonHelpToMenu.Text = "В меню!";
+			this.buttonHelpToMenu.UseVisualStyleBackColor = false;
+			this.buttonHelpToMenu.Visible = false;
+			this.buttonHelpToMenu.Click += new System.EventHandler(this.buttonHelpToMenu_Click);
+			// 
+			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(240F, 240F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.AutoSize = true;
 			this.BackColor = System.Drawing.SystemColors.Desktop;
 			this.ClientSize = new System.Drawing.Size(3788, 2072);
-			this.Controls.Add(this.buttonHelp2);
+			this.Controls.Add(this.buttonHelpToMenu);
 			this.Controls.Add(this.buttonDraw);
 			this.Controls.Add(this.label3);
-			this.Controls.Add(this.listBox2);
-			this.Controls.Add(this.listBox1);
-			this.Controls.Add(this.button4);
+			this.Controls.Add(this.listBoxY);
+			this.Controls.Add(this.listBoxX);
+			this.Controls.Add(this.buttonMenu);
 			this.Controls.Add(this.button3);
-			this.Controls.Add(this.button2);
+			this.Controls.Add(this.buttonOpen);
 			this.Controls.Add(this.buttonClose);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
+			this.Controls.Add(this.labelHelp);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-			this.Name = "Form1";
+			this.Name = "MainForm";
 			this.Text = "Замечательное КДЗ";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-			this.Load += new System.EventHandler(this.Form1_Load);
+			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -218,19 +237,20 @@
 
 		#endregion
 
-		private System.Windows.Forms.Timer timer2;
+		private System.Windows.Forms.Timer timer;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button buttonClose;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button buttonOpen;
 		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.OpenFileDialog openFileDialog1;
-		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.ListBox listBox1;
-		private System.Windows.Forms.ListBox listBox2;
+		private System.Windows.Forms.OpenFileDialog openFileDialog;
+		private System.Windows.Forms.Button buttonMenu;
+		private System.Windows.Forms.ListBox listBoxX;
+		private System.Windows.Forms.ListBox listBoxY;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button buttonDraw;
-		private System.Windows.Forms.Button buttonHelp2;
+		private System.Windows.Forms.Label labelHelp;
+		private System.Windows.Forms.Button buttonHelpToMenu;
 	}
 }
 

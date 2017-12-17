@@ -20,6 +20,14 @@ namespace CHW
 			dataTable.Visible = true;
 		}
 
+		public int Property
+		{
+			get => default(int);
+			set
+			{
+			}
+		}
+
 		private void Data_Load(object sender, EventArgs e)
 		{
 
