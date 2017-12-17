@@ -35,9 +35,11 @@
 			this.buttonCloseGraph = new System.Windows.Forms.Button();
 			this.graphTypeBox = new System.Windows.Forms.ListBox();
 			this.graphColorBox = new System.Windows.Forms.ListBox();
-			this.trackBar1 = new System.Windows.Forms.TrackBar();
+			this.trackBarMin = new System.Windows.Forms.TrackBar();
+			this.trackBarMax = new System.Windows.Forms.TrackBar();
 			((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.trackBarMin)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.trackBarMax)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// chart
@@ -100,16 +102,28 @@
 			this.graphColorBox.TabIndex = 14;
 			this.graphColorBox.SelectedIndexChanged += new System.EventHandler(this.graphColorBox_SelectedIndexChanged);
 			// 
-			// trackBar1
+			// trackBarMin
 			// 
-			this.trackBar1.Location = new System.Drawing.Point(45, 1893);
-			this.trackBar1.Maximum = 11;
-			this.trackBar1.Minimum = 1;
-			this.trackBar1.Name = "trackBar1";
-			this.trackBar1.Size = new System.Drawing.Size(3691, 114);
-			this.trackBar1.TabIndex = 15;
-			this.trackBar1.Value = 1;
-			this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
+			this.trackBarMin.Location = new System.Drawing.Point(45, 1893);
+			this.trackBarMin.Maximum = 100;
+			this.trackBarMin.Minimum = 1;
+			this.trackBarMin.Name = "trackBarMin";
+			this.trackBarMin.Size = new System.Drawing.Size(1800, 114);
+			this.trackBarMin.TabIndex = 15;
+			this.trackBarMin.Value = 50;
+			this.trackBarMin.Scroll += new System.EventHandler(this.trackBarMin_Scroll);
+			this.trackBarMin.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
+			// 
+			// trackBarMax
+			// 
+			this.trackBarMax.Location = new System.Drawing.Point(1962, 1893);
+			this.trackBarMax.Maximum = 100;
+			this.trackBarMax.Minimum = 1;
+			this.trackBarMax.Name = "trackBarMax";
+			this.trackBarMax.Size = new System.Drawing.Size(1800, 114);
+			this.trackBarMax.TabIndex = 16;
+			this.trackBarMax.Value = 50;
+			this.trackBarMax.Scroll += new System.EventHandler(this.trackBarMax_Scroll);
 			// 
 			// Graph
 			// 
@@ -118,7 +132,8 @@
 			this.AutoSize = true;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.ClientSize = new System.Drawing.Size(3808, 2072);
-			this.Controls.Add(this.trackBar1);
+			this.Controls.Add(this.trackBarMax);
+			this.Controls.Add(this.trackBarMin);
 			this.Controls.Add(this.graphColorBox);
 			this.Controls.Add(this.graphTypeBox);
 			this.Controls.Add(this.buttonCloseGraph);
@@ -128,7 +143,8 @@
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.Graph_Load);
 			((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.trackBarMin)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.trackBarMax)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -140,6 +156,7 @@
 		private System.Windows.Forms.Button buttonCloseGraph;
 		private System.Windows.Forms.ListBox graphTypeBox;
 		private System.Windows.Forms.ListBox graphColorBox;
-		private System.Windows.Forms.TrackBar trackBar1;
+		private System.Windows.Forms.TrackBar trackBarMin;
+		private System.Windows.Forms.TrackBar trackBarMax;
 	}
 }

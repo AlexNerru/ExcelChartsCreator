@@ -15,6 +15,8 @@ namespace CHW
 		private DataTable _table;
 		private int _indexX;
 		private int _indexY;
+		private int _min;
+		private int _max;
 		private int trackVal;
 
 		Dictionary<string, System.Windows.Forms.DataVisualization.Charting.SeriesChartType> graphNames
@@ -46,7 +48,9 @@ namespace CHW
 
 		private void Graph_Load(object sender, EventArgs e)
 		{
-			trackVal = trackBar1.Value;
+			_min = 0;
+			_max = _table.Rows.Count;
+			trackVal = trackBarMin.Value;
 			chart.ChartAreas[0].CursorX.IsUserEnabled = true;
 			chart.ChartAreas[0].CursorX.IsUserSelectionEnabled = true;
 			chart.ChartAreas[0].AxisX.ScaleView.Zoomable = true;
@@ -56,16 +60,31 @@ namespace CHW
 			chart.ChartAreas[0].AxisY.ScaleView.Zoomable = true;
 			chart.ChartAreas[0].AxisY.IsStartedFromZero = false;
 			chart.ChartAreas[0].AxisY.ScrollBar.IsPositionedInside = true;
-			chart.ChartAreas[0].AxisX.Maximum = MaxX()*2;
-			chart.ChartAreas[0].AxisX.Minimum = MinX()/2;
+			chart.ChartAreas[0].AxisX.Maximum = MaxX()*1.1;
+			chart.ChartAreas[0].AxisX.Minimum = MinX()/1.1;
 
 			chart.Series[0].Name = $"Зависимость {_table.Columns[_indexX].ColumnName} от {_table.Columns[_indexY].ColumnName}";
+
+			trackBarMin.Minimum = 1;
+			trackBarMin.Maximum = _table.Rows.Count;
+			trackBarMin.Value = 1;
+			trackBarMax.Minimum = 1;
+			trackBarMax.Maximum = _table.Rows.Count;
+			trackBarMax.Value = _table.Rows.Count;
+
+
+
+			chart.Series[0].Sort(System.Windows.Forms.DataVisualization.Charting.PointSortOrder.Descending);
+			DataView view = new DataView(_table);
+			view.Sort = _table.Columns[_indexX].ColumnName + " ASC";
+
+			_table = view.ToTable();
 
 			foreach (var graphName in graphNames.Keys)
 				graphTypeBox.Items.Add(graphName);
 			foreach (var graphColor in graphColors.Keys)
 				graphColorBox.Items.Add(graphColor);
-			DrawGraph();
+			DrawGraph(1, _table.Rows.Count-2);
 			
 
 		}
@@ -79,7 +98,7 @@ namespace CHW
 		{
 			chart.Series[0].Points.Clear();
 			chart.Series[0].ChartType = graphNames[graphTypeBox.Text];
-			DrawGraph();
+			//DrawGraph();
 			
 		}
 
@@ -87,30 +106,32 @@ namespace CHW
 		{
 			chart.Series[0].Points.Clear();
 			chart.Series[0].Color = graphColors[graphColorBox.Text];
-			DrawGraph(); 
+			//DrawGraph(); 
 		}
 
-		private void DrawGraph()
+		private void DrawGraph(int min, int max)
 		{
 			chart.Series[0].Points.Clear();
-			chart.Series[0].Sort(System.Windows.Forms.DataVisualization.Charting.PointSortOrder.Descending);
-			DataView view = new DataView(_table);
-			view.Sort = _table.Columns[_indexX].ColumnName + " ASC";
-			
-			_table = view.ToTable();
-			
-			for (int i =1;i<_table.Rows.Count;i++)
+			double localMin = MaxX();
+			double localMax = 0;
+			for (int i =min;i<max;i++)
 			{
-				if (Convert.ToDouble(_table.Rows[i][_indexX])<chart.ChartAreas[0].AxisX.Maximum || Convert.ToDouble(_table.Rows[i][_indexX]) > chart.ChartAreas[0].AxisX.Minimum)
-					chart.Series[0].Points.AddXY(_table.Rows[i][_indexX], _table.Rows[i][_indexY]);
+				if (Convert.ToDouble(_table.Rows[i][_indexX]) > localMax)
+					localMax = Convert.ToDouble(_table.Rows[i][_indexX]);
+				if (Convert.ToDouble(_table.Rows[i][_indexX]) < localMin)
+					localMin = Convert.ToDouble(_table.Rows[i][_indexX]);
+				chart.Series[0].Points.AddXY(_table.Rows[i][_indexX], _table.Rows[i][_indexY]);
 			}
+			chart.ChartAreas[0].AxisX.Maximum = localMax * 1.1;
+			chart.ChartAreas[0].AxisX.Minimum = localMin / 1.1;
+
 		}
 		
 
 		public double MaxX ()
 		{
 			List<double> lst = new List<Double>();
-			for (int a = 0; a < _table.Rows.Count-2; a++)
+			for (int a = 1; a < _table.Rows.Count-2; a++)
 			{
 				lst.Add(Convert.ToDouble(_table.Rows[a][_indexX]));
 			}
@@ -120,7 +141,7 @@ namespace CHW
 		public double MinX()
 		{
 			List<double> lst = new List<Double>();
-			for (int a = 0; a < _table.Rows.Count-2; a++)
+			for (int a = 1; a < _table.Rows.Count-2; a++)
 			{
 				lst.Add(Convert.ToDouble(_table.Rows[a][_indexX]));
 			}
@@ -129,20 +150,20 @@ namespace CHW
 
 		private void trackBar1_ValueChanged(object sender, EventArgs e)
 		{
-			if (trackVal < trackBar1.Value)
-			{
-				chart.ChartAreas[0].AxisX.Minimum = chart.ChartAreas[0].AxisX.Minimum * 1.05;
-				chart.ChartAreas[0].AxisX.Maximum = chart.ChartAreas[0].AxisX.Maximum / 1.05;
-				trackVal = trackBar1.Value;
 
-			}
-			else
-			{
-				chart.ChartAreas[0].AxisX.Minimum = chart.ChartAreas[0].AxisX.Minimum /1.05;
-				chart.ChartAreas[0].AxisX.Maximum = chart.ChartAreas[0].AxisX.Maximum * 1.05;
-				trackVal = trackBar1.Value;
-			}
-			DrawGraph();
+			
+		}
+
+		private void trackBarMax_Scroll(object sender, EventArgs e)
+		{
+			_max = trackBarMax.Value;
+			DrawGraph(_min, _max);
+		}
+
+		private void trackBarMin_Scroll(object sender, EventArgs e)
+		{
+			_min = trackBarMin.Value;
+			DrawGraph(_min, _max);
 		}
 	}
 	}
