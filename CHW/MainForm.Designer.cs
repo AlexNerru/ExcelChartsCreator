@@ -31,7 +31,7 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.timer = new System.Windows.Forms.Timer(this.components);
-			this.label1 = new System.Windows.Forms.Label();
+			this.greetingLabel = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.buttonClose = new System.Windows.Forms.Button();
 			this.buttonOpen = new System.Windows.Forms.Button();
@@ -52,15 +52,15 @@
 			// 
 			// label1
 			// 
-			this.label1.AutoSize = true;
-			this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.label1.Font = new System.Drawing.Font("Segoe Script", 25F);
-			this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label1.Location = new System.Drawing.Point(234, 548);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(2543, 399);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "Добро пожаловать!\r\nЭто КДЗ Карпина Александра Николаевича БПИ176.\r\nНадеюсь, Вам п" +
+			this.greetingLabel.AutoSize = true;
+			this.greetingLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.greetingLabel.Font = new System.Drawing.Font("Segoe Script", 25F);
+			this.greetingLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.greetingLabel.Location = new System.Drawing.Point(234, 548);
+			this.greetingLabel.Name = "label1";
+			this.greetingLabel.Size = new System.Drawing.Size(2543, 399);
+			this.greetingLabel.TabIndex = 0;
+			this.greetingLabel.Text = "Добро пожаловать!\r\nЭто КДЗ Карпина Александра Николаевича БПИ176.\r\nНадеюсь, Вам п" +
     "онравится :)\r\n";
 			// 
 			// label2
@@ -223,7 +223,7 @@
 			this.Controls.Add(this.buttonOpen);
 			this.Controls.Add(this.buttonClose);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.greetingLabel);
 			this.Controls.Add(this.labelHelp);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "MainForm";
@@ -238,7 +238,7 @@
 		#endregion
 
 		private System.Windows.Forms.Timer timer;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label greetingLabel;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button buttonClose;
 		private System.Windows.Forms.Button buttonOpen;

@@ -14,18 +14,36 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 namespace CHW
 {
+	/// <summary>
+	/// Main class, which is user for all interactions with user
+	/// </summary>
 	public partial class MainForm : Form
 	{
+		/// <summary>
+		/// Table of data which was loaded from file
+		/// </summary>
 		private DataTable _table; 
+
+		/// <summary>
+		/// Text of first label
+		/// </summary>
 		private readonly string GREETINGS_LABEL_TEXT;
+
+		/// <summary>
+		/// Randomiser
+		/// </summary>
 		Random rand = new Random();
 
 		public MainForm()
 		{
 			InitializeComponent();
-			GREETINGS_LABEL_TEXT = label1.Text;
+			GREETINGS_LABEL_TEXT = greetingLabel.Text;
 		}
 
+		/// <summary>
+		/// Changes visible property of main menu items
+		/// </summary>
+		/// <param name="state">true - visible, false - not</param>
 		private void ChangeMenuState(bool state)
 		{
 			buttonClose.Visible = state;
@@ -34,6 +52,10 @@ namespace CHW
 			
 		}
 
+		/// <summary>
+		/// Changes visible property of drawing graph menu items
+		/// </summary>
+		/// <param name="state">true - visible, false - not<</param>
 		private void ChangeGraphMenuStatus (bool state)
 		{
 			buttonMenu.Visible = state;
@@ -43,46 +65,67 @@ namespace CHW
 			buttonDraw.Visible = state;
 		}
 
+		/// <summary>
+		/// Event which is calles immediatly, when form has loaded
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 			timer.Enabled = true;  // таймер включен
 			timer.Interval = 100;
 			ChangeMenuState(false);
 			ChangeGraphMenuStatus(false);
-			label1.Text = String.Empty;
+			greetingLabel.Text = String.Empty;
 		}
 
+		/// <summary>
+		/// Timer ticker, which draws "greetings label"
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void timer_Tick(object sender, EventArgs e)
 		{
 
-			if (label1.Text.Length < GREETINGS_LABEL_TEXT.Length)
+			if (greetingLabel.Text.Length < GREETINGS_LABEL_TEXT.Length)
 			{
-				label1.Text = GREETINGS_LABEL_TEXT.Substring(0, label1.Text.Length + 1);
+				greetingLabel.Text = GREETINGS_LABEL_TEXT.Substring(0, greetingLabel.Text.Length + 1);
 				timer.Interval= rand.Next(50, 150);
 			}
 			else
 			{
 				timer.Enabled = false;
-				label1.Visible = false;
+				greetingLabel.Visible = false;
 				ChangeMenuState(true);
 			}
-		}
+		}		
 
-		
-
-
+		/// <summary>
+		/// Event, which calls after clicking "close" button
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void buttonClose_Click(object sender, EventArgs e)
 		{
 			this.Close();
 		}
-		
 
+		/// <summary>
+		/// Event, which calls after clicking "open" button
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void buttonOpen_Click(object sender, EventArgs e)
 		{
 			openFileDialog.Filter = "Excel Files| *.xls; *.xlsx";
 			openFileDialog.ShowDialog();
 		}
 
+		/// <summary>
+		/// Event, which calls when user clicks "ok" button in open file dialog
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void openFileDialog_FileOk(object sender, CancelEventArgs e)
 		{
 			listBoxX.Items.Clear();
@@ -113,7 +156,11 @@ namespace CHW
 			}
 		}
 
-
+		/// <summary>
+		/// Loads chosen Excel file
+		/// </summary>
+		/// <param name="filePath"></param>
+		/// <returns>Names of colums which has numeric values</returns>
 		private List<string> LoadFile(string filePath)
 		{
 			System.Data.OleDb.OleDbConnection MyConnection;
@@ -121,7 +168,6 @@ namespace CHW
 			System.Data.OleDb.OleDbDataAdapter MyCommand;
 			MyConnection = new System.Data.OleDb.OleDbConnection("provider=Microsoft.Jet.OLEDB.4.0;" +
 				$"Data Source='{filePath}';Extended Properties=Excel 8.0;");
-			// :TODO Сделать, чтобы был выбор листа
 			MyCommand = new System.Data.OleDb.OleDbDataAdapter("select * from [Worksheet$]", MyConnection);
 			DtSet = new System.Data.DataSet();
 			MyCommand.Fill(DtSet);			
@@ -136,6 +182,11 @@ namespace CHW
 			
 		}
 
+		/// <summary>
+		/// Creates list of names of numeric type colums
+		/// </summary>
+		/// <param name="dataTable"></param>
+		/// <returns>list of string names</returns>
 		private List<string> GetNumericColumnsNames (DataTable dataTable)
 		{
 			List<string> names = new List<string>();
@@ -150,6 +201,11 @@ namespace CHW
 
 		}
 
+		/// <summary>
+		/// Checks if Type object is numeric
+		/// </summary>
+		/// <param name="type"></param>
+		/// <returns>true if type is numeric, false if not</returns>
 		private bool IsNumericType(Type type)
 		{
 
@@ -172,12 +228,22 @@ namespace CHW
 			}
 		}
 
+		/// <summary>
+		/// Shows main menu and hides graph menu
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void buttonToMenu_Click(object sender, EventArgs e)
 		{
 			ChangeGraphMenuStatus(false);
 			ChangeMenuState(true);
 		}
 
+		/// <summary>
+		/// Creates new Graph object from a table and shows it
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void buttonDraw_Click(object sender, EventArgs e)
 		{
 			int indexX, indexY;
@@ -196,6 +262,11 @@ namespace CHW
 
 		}
 
+		/// <summary>
+		/// Shows help and hides main menu
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void buttonHelp_Click(object sender, EventArgs e)
 		{
 			ChangeGraphMenuStatus(false);
@@ -204,6 +275,11 @@ namespace CHW
 			buttonHelpToMenu.Visible = true;
 		}
 
+		/// <summary>
+		/// Hides labelHelp and shows main menu
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void buttonHelpToMenu_Click(object sender, EventArgs e)
 		{
 			labelHelp.Visible = false;
