@@ -234,7 +234,7 @@
 		private System.Windows.Forms.Timer timer;
 
 		/// <summary>
-		/// Label which is shown to greet user
+		/// Text which to greet user
 		/// </summary>
 		private System.Windows.Forms.Label labelGreetings;
 

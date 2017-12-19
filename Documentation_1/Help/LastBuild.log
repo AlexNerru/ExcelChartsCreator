@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.5.15.0" projectFile="C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Documentation_1.shfbproj" started="19.12.2017 22:36:16">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.5.15.0" projectFile="C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Documentation_1.shfbproj" started="19.12.2017 23:11:59">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Apps\Sandcastle\&#39;
@@ -32,12 +32,12 @@ Generating shared content files (en-US, Английский (США))...
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00,0012
+    Last step completed in 00:00:00,0000
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - GenerateRefInfo.proj]
-‘Ў&#174;аЄ&#160; &#173;&#160;з&#160;в&#160; 19.12.2017 22:36:17.
+‘Ў&#174;аЄ&#160; &#173;&#160;з&#160;в&#160; 19.12.2017 23:12:01.
 Џа&#174;ҐЄв &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\GenerateRefInfo.proj&quot; ў г&#167;&#171;Ґ 1 (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
 PrepareForBuild:
   ‘&#174;&#167;&#164;&#160;&#173;ЁҐ Є&#160;в&#160;&#171;&#174;Ј&#160; &quot;obj\Debug\&quot;.
@@ -47,19 +47,19 @@ GenerateRefInfo:
   Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
   No source code context base path specified.  Source context information is unavailable.
   Loaded 1 assemblies for reflection and 4 dependency assemblies.
-  Wrote information on 1 namespaces, 3 types, and 70 members
+  Wrote information on 1 namespaces, 3 types, and 69 members
   Љ&#174;ЇЁа&#174;ў&#160;&#173;ЁҐ д&#160;&#169;&#171;&#160; Ё&#167; &quot;reflection.org&quot; ў &quot;reflection.all&quot;.
   XslTransform (v2017.5.15.0)
   Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Apps\Sandcastle\ProductionTransforms\MergeDuplicates.xsl&#39;.
 ‘Ў&#174;аЄ&#160; Їа&#174;ҐЄв&#160; &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\GenerateRefInfo.proj&quot; &#167;&#160;ўҐаиҐ&#173;&#160; (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
-    Last step completed in 00:00:02,2956
+    Last step completed in 00:00:02,1057
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - TransformManifest.proj]
-‘Ў&#174;аЄ&#160; &#173;&#160;з&#160;в&#160; 19.12.2017 22:36:19.
+‘Ў&#174;аЄ&#160; &#173;&#160;з&#160;в&#160; 19.12.2017 23:12:03.
 Џа&#174;ҐЄв &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\TransformManifest.proj&quot; ў г&#167;&#171;Ґ 1 (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
 TransformManifest:
   XslTransform (v2017.5.15.0)
@@ -76,11 +76,11 @@ TransformManifest:
   Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
   Applying XSL transformation &#39;C:\Apps\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl&#39;.
 ‘Ў&#174;аЄ&#160; Їа&#174;ҐЄв&#160; &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\TransformManifest.proj&quot; &#167;&#160;ўҐаиҐ&#173;&#160; (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
-    Last step completed in 00:00:01,3747
+    Last step completed in 00:00:01,3554
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00,0172
+    Last step completed in 00:00:00,0030
 </buildStep>
 <buildStep step="CopyConceptualContent">
 Copying conceptual content...
@@ -91,28 +91,28 @@ Copying images and creating the media map file...
 Generating conceptual topic files
     Parsing topic file &#39;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Content\Welcome.aml&#39;
     C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Content\Welcome.aml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\ddueXml\9047d008-f0ac-4fc6-b57b-981c51a0cb28.xml
-    Last step completed in 00:00:00,0370
+    Last step completed in 00:00:00,0220
 </buildStep>
 <buildStep step="CreateConceptualTopicConfigs">
 Creating conceptual topic configuration files...
     Companion files
     _ContentMetadata_.xml
     Merging topic IDs into manifest.xml
-    Last step completed in 00:00:00,0087
+    Last step completed in 00:00:00,0064
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\icons\Help.png -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\icons\Help.png
-    Last step completed in 00:00:00,0060
+    Last step completed in 00:00:00,0050
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00,0010
+    Last step completed in 00:00:00,0000
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - GenerateIntermediateTOC.proj]
-‘Ў&#174;аЄ&#160; &#173;&#160;з&#160;в&#160; 19.12.2017 22:36:21.
+‘Ў&#174;аЄ&#160; &#173;&#160;з&#160;в&#160; 19.12.2017 23:12:04.
 Џа&#174;ҐЄв &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\GenerateIntermediateTOC.proj&quot; ў г&#167;&#171;Ґ 1 (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
 GenerateIntermediateTOC:
   XslTransform (v2017.5.15.0)
@@ -121,12 +121,12 @@ GenerateIntermediateTOC:
   Applying XSL transformation &#39;C:\Apps\Sandcastle\\ProductionTransforms\CreateVSToc.xsl&#39;.
 ‘Ў&#174;аЄ&#160; Їа&#174;ҐЄв&#160; &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\GenerateIntermediateTOC.proj&quot; &#167;&#160;ўҐаиҐ&#173;&#160; (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:01,2320
+    Last step completed in 00:00:00,9740
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00,4551
+    Last step completed in 00:00:00,2820
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
@@ -134,12 +134,12 @@ C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\sandcastle.
   Updating reference topic configurations.
   Updating conceptual topic configurations.
     Removing unused ExampleComponent.
-    Last step completed in 00:00:00,0088
+    Last step completed in 00:00:00,0040
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - BuildTopics.proj]
-‘Ў&#174;аЄ&#160; &#173;&#160;з&#160;в&#160; 19.12.2017 22:36:23.
+‘Ў&#174;аЄ&#160; &#173;&#160;з&#160;в&#160; 19.12.2017 23:12:05.
 Џа&#174;ҐЄв &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\BuildTopics.proj&quot; ў г&#167;&#171;Ґ 1 (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
 BuildTopics:
   BuildAssembler (v2017.5.15.0)
@@ -148,18 +148,18 @@ BuildTopics:
   Loading configuration...
   Processing topics...
 BuildAssembler : warning : ResolveConceptualLinksComponent: [9047d008-f0ac-4fc6-b57b-981c51a0cb28] Unknown conceptual link target &#39;dc5dd187-2853-485d-886b-cd8b31c40e8d&#39;. [C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\BuildTopics.proj]
-  Processed 81 topic(s)
+  Processed 80 topic(s)
   1 warning(s)
   CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
   ResolveArtLinksComponent: Copying media files...
   CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 8 of 15.
   CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 1 of 30.
 ‘Ў&#174;аЄ&#160; Їа&#174;ҐЄв&#160; &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\BuildTopics.proj&quot; &#167;&#160;ўҐаиҐ&#173;&#160; (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
-    Last step completed in 00:00:12,3459
+    Last step completed in 00:00:11,8966
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00,0031
+    Last step completed in 00:00:00,0016
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -218,7 +218,7 @@ C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\webSettings.xml
 C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\theme\theme1.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\word\theme\theme1.xml
 C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\_rels\document.xml.rels -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\word\_rels\document.xml.rels
 C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\_rels\rels.xml.rels -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\_rels\rels.xml.rels
-    Last step completed in 00:00:00,3100
+    Last step completed in 00:00:00,2440
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Executing informational Generate Table of Contents build step for plug-ins (not used for Open XML)
@@ -226,27 +226,27 @@ Executing informational Generate Table of Contents build step for plug-ins (not 
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Executing informational Generate Help Project build step for plug-ins (not used for Open XML)
-    Last step completed in 00:00:00,0010
+    Last step completed in 00:00:00,0005
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Generating Open XML document file...
 [C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - BuildOpenXmlFile.proj]
-  Finished merging 81 topics
+  Finished merging 80 topics
   30 external hyperlink relationship(s) defined
   6 image relationship(s) defined
   0 list numbering style override(s) defined
   Saving C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Documentation_1.docx...
   Finished saving C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Documentation_1.docx
-  Compressed 21 files.  Reduced size by 476я779 bytes (93%).
-    Last step completed in 00:00:01,1700
+  Compressed 21 files.  Reduced size by 476я015 bytes (93%).
+    Last step completed in 00:00:01,2070
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,0560
+    Last step completed in 00:00:00,0510
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 19.12.2017 22:36:36.  Total time: 00:00:20,1528
+Build completed successfully at 19.12.2017 23:12:19.  Total time: 00:00:19,0566
 
 </buildStep>
 </shfbBuild>

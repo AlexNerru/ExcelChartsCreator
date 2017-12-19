@@ -67,6 +67,7 @@ namespace CHW
 				{"Красный",System.Drawing.Color.Red },
 				{"Зелыный",System.Drawing.Color.Green },
 				{"Синий",System.Drawing.Color.Blue },
+				
 			};
 
 		/// <summary>
@@ -252,6 +253,43 @@ namespace CHW
 			trackBarMin.Maximum = (int)(trackBarMax.Value / 1.1);
 			_max = trackBarMax.Value;
 			DrawGraph(_min, _max);
+		}
+
+		/// <summary>
+		/// Event called after clicking "MoreColors" button
+		/// Used to change graph type
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void buttonColorDialog_Click(object sender, EventArgs e)
+		{
+			if (colorDialog.ShowDialog() == DialogResult.OK)
+			{
+				chart.Series[0].Color = colorDialog.Color;
+			}
+		}
+
+		/// <summary>
+		/// Event called after clicking "Export" button
+		/// Used to export chart as jpeg
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void buttonExport_Click(object sender, EventArgs e)
+		{
+			saveFileDialog.Filter = "JPeg Image|*.jpg";
+			saveFileDialog.Title = "Save an Image File";
+			if (saveFileDialog.ShowDialog()== DialogResult.OK)
+			{
+				if (saveFileDialog.FileName != "")
+				{
+					
+					System.IO.FileStream fs =
+					   (System.IO.FileStream)saveFileDialog.OpenFile();
+					chart.SaveImage(fs, System.Drawing.Imaging.ImageFormat.Jpeg);
+					fs.Close();
+				}
+			}
 		}
 	}
 	}

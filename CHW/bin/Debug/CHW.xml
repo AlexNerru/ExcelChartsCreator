@@ -199,9 +199,64 @@
             Timer for drawing Greetings Label
             </summary>
         </member>
-        <member name="F:CHW.MainForm.greetingLabel">
+        <member name="F:CHW.MainForm.labelGreetings">
             <summary>
-            Label which is shown to greet user
+            Text which to greet user
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.buttonClose">
+            <summary>
+            Button to close app
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.buttonOpen">
+            <summary>
+            Button to open file via openFileDialog
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.buttonHelp">
+            <summary>
+            Button to show help
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.openFileDialog">
+            <summary>
+            OpenFileDialog to work with files
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.buttonMenu">
+            <summary>
+            Button to return to menu
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.listBoxX">
+            <summary>
+            ListBox for names of X columns
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.listBoxY">
+            <summary>
+            ListBox for names of Y column
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.labelChooseColumns">
+            <summary>
+            Shows information that user need to choose columns for x and y
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.buttonDraw">
+            <summary>
+            Is used to call drawGraph event
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.labelHelp">
+            <summary>
+            Contains help information
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.buttonHelpToMenu">
+            <summary>
+            Button to returm to main menu
             </summary>
         </member>
         <member name="T:CHW.Graph">
@@ -318,6 +373,22 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
+        <member name="M:CHW.Graph.buttonColorDialog_Click(System.Object,System.EventArgs)">
+            <summary>
+            Event called after clicking "MoreColors" button
+            Used to change graph type
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.Graph.buttonExport_Click(System.Object,System.EventArgs)">
+            <summary>
+            Event called after clicking "Export" button
+            Used to export chart as jpeg
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
         <member name="F:CHW.Graph.components">
             <summary>
             Required designer variable.
@@ -333,6 +404,36 @@
             <summary>
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:CHW.Graph.chart">
+            <summary>
+            Represents chart for drawing graph
+            </summary>
+        </member>
+        <member name="F:CHW.Graph.buttonCloseGraph">
+            <summary>
+            Button for closing graph window
+            </summary>
+        </member>
+        <member name="F:CHW.Graph.graphTypeBox">
+            <summary>
+            Listbox which allow to change graph type
+            </summary>
+        </member>
+        <member name="F:CHW.Graph.graphColorBox">
+            <summary>
+            Listbox which allow to change graph color
+            </summary>
+        </member>
+        <member name="F:CHW.Graph.trackBarMin">
+            <summary>
+            TrackBar element which sets axis x minimum
+            </summary>
+        </member>
+        <member name="F:CHW.Graph.trackBarMax">
+            <summary>
+            TrackBar element which sets axis x maximum
             </summary>
         </member>
         <member name="M:CHW.Program.Main">

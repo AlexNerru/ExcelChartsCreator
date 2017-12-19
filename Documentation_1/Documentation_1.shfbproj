@@ -90,7 +90,8 @@
   <!-- The pre-build and post-build event properties must appear *after* the targets file import in order to be
 			 evaluated correctly. -->
   <PropertyGroup>
-    <PreBuildEvent>s</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
     <PostBuildEvent>
     </PostBuildEvent>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
