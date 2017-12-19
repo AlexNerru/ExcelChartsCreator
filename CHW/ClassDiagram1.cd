@@ -2,25 +2,22 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="CHW.Data">
     <Position X="1" Y="1" Width="1.5" />
-    <Members>
-      <Property Name="Property" Hidden="true" />
-    </Members>
     <TypeIdentifier>
-      <HashCode>AAAQAAAABCAAAAIAAgCAAAgCAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <HashCode>AAAQAAAABCAAAAIAAACAAAgCAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Data.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CHW.Graph">
     <Position X="3.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAQhACSACAAggAgABCAAAgyAAAAAAAAACAQAgAAQAA=</HashCode>
+      <HashCode>UAAQhACSACAAgkAAARCAAAgyAAAAAAAAEABUAAAAUAA=</HashCode>
       <FileName>Graph.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CHW.MainForm">
     <Position X="5.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAIBRACEAAhAIAACIQIACAAAqoAAAAHQIIACpBAA=</HashCode>
+      <HashCode>AAQAAIBRACkAAhAIAACIUIACAAgiwEBABAAAIAChRAA=</HashCode>
       <FileName>MainForm.cs</FileName>
     </TypeIdentifier>
   </Class>

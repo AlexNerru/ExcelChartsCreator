@@ -13,6 +13,10 @@ namespace CHW
 	public partial class Data : Form
 	{
 		
+		/// <summary>
+		/// Constructor for data window
+		/// </summary>
+		/// <param name="data"></param>
 		public Data(DataTable data)
 		{
 			InitializeComponent();
@@ -20,27 +24,22 @@ namespace CHW
 			dataTable.Visible = true;
 		}
 
-		public int Property
-		{
-			get => default(int);
-			set
-			{
-			}
-		}
 
 		private void Data_Load(object sender, EventArgs e)
 		{
 
 		}
 
+		/// <summary>
+		/// Event, which is called after clicking "close" button
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void buttonCloseGraph_Click(object sender, EventArgs e)
 		{
 			this.Close();
 		}
 
-		private void dataTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-		{
 
-		}
 	}
 }

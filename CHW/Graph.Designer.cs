@@ -28,9 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
 			this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.buttonCloseGraph = new System.Windows.Forms.Button();
 			this.graphTypeBox = new System.Windows.Forms.ListBox();
@@ -44,20 +44,20 @@
 			// 
 			// chart
 			// 
-			chartArea3.BackColor = System.Drawing.Color.White;
-			chartArea3.Name = "ChartArea1";
-			this.chart.ChartAreas.Add(chartArea3);
-			legend3.Name = "Legend1";
-			this.chart.Legends.Add(legend3);
+			chartArea2.BackColor = System.Drawing.Color.White;
+			chartArea2.Name = "ChartArea1";
+			this.chart.ChartAreas.Add(chartArea2);
+			legend2.Name = "Legend1";
+			this.chart.Legends.Add(legend2);
 			this.chart.Location = new System.Drawing.Point(21, 307);
 			this.chart.Name = "chart";
 			this.chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-			series3.ChartArea = "ChartArea1";
-			series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-			series3.Legend = "Legend1";
-			series3.Name = "Series1";
-			series3.YValuesPerPoint = 5;
-			this.chart.Series.Add(series3);
+			series2.ChartArea = "ChartArea1";
+			series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+			series2.Legend = "Legend1";
+			series2.Name = "Series1";
+			series2.YValuesPerPoint = 5;
+			this.chart.Series.Add(series2);
 			this.chart.Size = new System.Drawing.Size(3741, 1550);
 			this.chart.TabIndex = 0;
 			this.chart.Text = "chart";
@@ -111,8 +111,7 @@
 			this.trackBarMin.Size = new System.Drawing.Size(1800, 114);
 			this.trackBarMin.TabIndex = 15;
 			this.trackBarMin.Value = 50;
-			this.trackBarMin.Scroll += new System.EventHandler(this.trackBarMin_Scroll);
-			this.trackBarMin.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
+			this.trackBarMin.ValueChanged += new System.EventHandler(this.trackBarMin_ValueChanged);
 			// 
 			// trackBarMax
 			// 
@@ -123,7 +122,7 @@
 			this.trackBarMax.Size = new System.Drawing.Size(1800, 114);
 			this.trackBarMax.TabIndex = 16;
 			this.trackBarMax.Value = 50;
-			this.trackBarMax.Scroll += new System.EventHandler(this.trackBarMax_Scroll);
+			this.trackBarMax.ValueChanged += new System.EventHandler(this.trackBarMax_ValueChanged);
 			// 
 			// Graph
 			// 

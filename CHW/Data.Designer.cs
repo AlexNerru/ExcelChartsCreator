@@ -47,7 +47,6 @@
 			this.dataTable.Size = new System.Drawing.Size(3730, 1554);
 			this.dataTable.TabIndex = 0;
 			this.dataTable.Visible = false;
-			this.dataTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTable_CellContentClick);
 			// 
 			// buttonCloseGraph
 			// 
