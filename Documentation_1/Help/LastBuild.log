@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2017.5.15.0" projectFile="C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Documentation_1.shfbproj" started="19.12.2017 22:36:16">
+<buildStep step="Initializing">
+Finding tools...
+The Sandcastle tools are located in &#39;C:\Apps\Sandcastle\&#39;
+Locating components in the following folder(s):
+    C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1
+    C:\ProgramData\EWSoftware\Sandcastle Help File Builder\Components and Plug-Ins\
+    C:\Apps\Sandcastle\
+Using framework reflection data for &#39;.NET Framework 4.7&#39; located in &#39;C:\Apps\Sandcastle\Data\.NETFramework&#39;
+Using presentation style &#39;OpenXML&#39; located in &#39;C:\Apps\Sandcastle\PresentationStyles\OpenXML&#39;
+</buildStep>
+<buildStep step="ValidatingDocumentationSources">
+Validating and copying documentation source information
+Source: C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\CHW.csproj
+    Found project &#39;C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\CHW.csproj&#39;
+
+Parsing project files
+    Found assembly &#39;C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\bin\Debug\CHW.exe&#39;
+
+References to include (excluding framework assemblies):
+    Microsoft.Office.Core
+    Microsoft.Office.Interop.Excel
+    VBIDE
+
+Copying XML comments files
+    C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\bin\Debug\CHW.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\CHW.xml
+</buildStep>
+<buildStep step="GenerateSharedContent">
+Generating shared content files (en-US, Английский (США))...
+    Last step completed in 00:00:00,0050
+</buildStep>
+<buildStep step="GenerateApiFilter">
+Generating API filter for MRefBuilder...
+    Last step completed in 00:00:00,0012
+</buildStep>
+<buildStep step="GenerateReflectionInfo">
+Generating reflection information...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - GenerateRefInfo.proj]
+‘Ў&#174;аЄ&#160; &#173;&#160;з&#160;в&#160; 19.12.2017 22:36:17.
+Џа&#174;ҐЄв &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\GenerateRefInfo.proj&quot; ў г&#167;&#171;Ґ 1 (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
+PrepareForBuild:
+  ‘&#174;&#167;&#164;&#160;&#173;ЁҐ Є&#160;в&#160;&#171;&#174;Ј&#160; &quot;obj\Debug\&quot;.
+GenerateRefInfo:
+  MRefBuilder (v2017.5.15.0)
+  Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
+  No source code context base path specified.  Source context information is unavailable.
+  Loaded 1 assemblies for reflection and 4 dependency assemblies.
+  Wrote information on 1 namespaces, 3 types, and 70 members
+  Љ&#174;ЇЁа&#174;ў&#160;&#173;ЁҐ д&#160;&#169;&#171;&#160; Ё&#167; &quot;reflection.org&quot; ў &quot;reflection.all&quot;.
+  XslTransform (v2017.5.15.0)
+  Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Apps\Sandcastle\ProductionTransforms\MergeDuplicates.xsl&#39;.
+‘Ў&#174;аЄ&#160; Їа&#174;ҐЄв&#160; &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\GenerateRefInfo.proj&quot; &#167;&#160;ўҐаиҐ&#173;&#160; (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
+    Last step completed in 00:00:02,2956
+</buildStep>
+<buildStep step="TransformReflectionInfo">
+Transforming reflection output...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - TransformManifest.proj]
+‘Ў&#174;аЄ&#160; &#173;&#160;з&#160;в&#160; 19.12.2017 22:36:19.
+Џа&#174;ҐЄв &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\TransformManifest.proj&quot; ў г&#167;&#171;Ґ 1 (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
+TransformManifest:
+  XslTransform (v2017.5.15.0)
+  Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Apps\Sandcastle\\ProductionTransforms\ApplyVSDocModel.xsl&#39;.
+  Љ&#174;ЇЁа&#174;ў&#160;&#173;ЁҐ д&#160;&#169;&#171;&#160; Ё&#167; &quot;reflection.xml&quot; ў &quot;reflection.nofilenames&quot;.
+  XslTransform (v2017.5.15.0)
+  Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Apps\Sandcastle\ProductionTransforms\AddFilenames.xsl&#39;.
+  XslTransform (v2017.5.15.0)
+  Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Apps\Sandcastle\ProductionTransforms\ReflectionToManifest.xsl&#39;.
+‘Ў&#174;аЄ&#160; Їа&#174;ҐЄв&#160; &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\TransformManifest.proj&quot; &#167;&#160;ўҐаиҐ&#173;&#160; (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
+    Last step completed in 00:00:01,3747
+</buildStep>
+<buildStep step="GenerateNamespaceSummaries">
+Generating namespace summary information...
+    Last step completed in 00:00:00,0172
+</buildStep>
+<buildStep step="CopyConceptualContent">
+Copying conceptual content...
+Copying standard token shared content file...
+Checking for other token files...
+Checking for code snippets files...
+Copying images and creating the media map file...
+Generating conceptual topic files
+    Parsing topic file &#39;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Content\Welcome.aml&#39;
+    C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Content\Welcome.aml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\ddueXml\9047d008-f0ac-4fc6-b57b-981c51a0cb28.xml
+    Last step completed in 00:00:00,0370
+</buildStep>
+<buildStep step="CreateConceptualTopicConfigs">
+Creating conceptual topic configuration files...
+    Companion files
+    _ContentMetadata_.xml
+    Merging topic IDs into manifest.xml
+    Last step completed in 00:00:00,0087
+</buildStep>
+<buildStep step="CopyAdditionalContent">
+Copying additional content files...
+C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\icons\Help.png -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\icons\Help.png
+    Last step completed in 00:00:00,0060
+</buildStep>
+<buildStep step="MergeTablesOfContents">
+Merging conceptual and additional tables of contents...
+    Last step completed in 00:00:00,0010
+</buildStep>
+<buildStep step="GenerateIntermediateTableOfContents">
+Generating intermediate table of contents file...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - GenerateIntermediateTOC.proj]
+‘Ў&#174;аЄ&#160; &#173;&#160;з&#160;в&#160; 19.12.2017 22:36:21.
+Џа&#174;ҐЄв &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\GenerateIntermediateTOC.proj&quot; ў г&#167;&#171;Ґ 1 (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
+GenerateIntermediateTOC:
+  XslTransform (v2017.5.15.0)
+  Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
+  Applying XSL transformation &#39;C:\Apps\Sandcastle\\ProductionTransforms\CreateVSToc.xsl&#39;.
+‘Ў&#174;аЄ&#160; Їа&#174;ҐЄв&#160; &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\GenerateIntermediateTOC.proj&quot; &#167;&#160;ўҐаиҐ&#173;&#160; (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
+Generating conceptual content intermediate TOC file...
+    Last step completed in 00:00:01,2320
+</buildStep>
+<buildStep step="CreateBuildAssemblerConfigs">
+Creating Sandcastle configuration files...
+    sandcastle.config
+    Last step completed in 00:00:00,4551
+</buildStep>
+<buildStep step="MergeCustomConfigs">
+Merging custom build component configurations
+C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\sandcastle.config
+  Updating reference topic configurations.
+  Updating conceptual topic configurations.
+    Removing unused ExampleComponent.
+    Last step completed in 00:00:00,0088
+</buildStep>
+<buildStep step="BuildTopics">
+Building help topics...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - BuildTopics.proj]
+‘Ў&#174;аЄ&#160; &#173;&#160;з&#160;в&#160; 19.12.2017 22:36:23.
+Џа&#174;ҐЄв &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\BuildTopics.proj&quot; ў г&#167;&#171;Ґ 1 (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
+BuildTopics:
+  BuildAssembler (v2017.5.15.0)
+  Copyright c 2006-2017, Microsoft Corporation, All Rights Reserved.
+  Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
+  Loading configuration...
+  Processing topics...
+BuildAssembler : warning : ResolveConceptualLinksComponent: [9047d008-f0ac-4fc6-b57b-981c51a0cb28] Unknown conceptual link target &#39;dc5dd187-2853-485d-886b-cd8b31c40e8d&#39;. [C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\BuildTopics.proj]
+  Processed 81 topic(s)
+  1 warning(s)
+  CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
+  ResolveArtLinksComponent: Copying media files...
+  CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 8 of 15.
+  CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 1 of 30.
+‘Ў&#174;аЄ&#160; Їа&#174;ҐЄв&#160; &quot;C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\BuildTopics.proj&quot; &#167;&#160;ўҐаиҐ&#173;&#160; (жҐ&#171;ҐўлҐ &#174;ЎкҐЄвл Ї&#174; г&#172;&#174;&#171;з&#160;&#173;Ёо).
+    Last step completed in 00:00:12,3459
+</buildStep>
+<buildStep step="CombiningIntermediateTocFiles">
+Combining conceptual and API intermediate TOC files...
+    Last step completed in 00:00:00,0031
+</buildStep>
+<buildStep step="CopyStandardHelpContent">
+Copying standard help content...
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\Content_Types.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\Content_Types.xml
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\docProps\app.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\docProps\app.xml
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\docProps\core.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\docProps\core.xml
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\docProps\custom.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\docProps\custom.xml
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\alert_caution.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\alert_caution.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\alert_note.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\alert_note.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\alert_security.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\alert_security.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\CFW.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\CFW.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\CodeExample.png -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\CodeExample.png
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\privclass.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\privclass.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\privdelegate.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\privdelegate.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\privenumeration.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\privenumeration.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\privevent.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\privevent.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\privextension.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\privextension.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\privfield.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\privfield.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\privinterface.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\privinterface.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\privmethod.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\privmethod.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\privproperty.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\privproperty.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\privstructure.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\privstructure.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\protclass.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\protclass.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\protdelegate.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\protdelegate.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\protenumeration.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\protenumeration.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\protevent.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\protevent.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\protextension.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\protextension.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\protfield.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\protfield.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\protinterface.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\protinterface.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\protmethod.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\protmethod.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\protoperator.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\protoperator.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\protproperty.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\protproperty.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\protstructure.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\protstructure.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\pubclass.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\pubclass.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\pubdelegate.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\pubdelegate.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\pubenumeration.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\pubenumeration.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\pubevent.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\pubevent.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\pubextension.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\pubextension.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\pubfield.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\pubfield.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\pubinterface.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\pubinterface.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\pubmethod.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\pubmethod.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\puboperator.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\puboperator.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\pubproperty.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\pubproperty.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\pubstructure.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\pubstructure.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\slMobile.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\slMobile.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\static.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\static.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\media\xna.gif -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\media\xna.gif
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\document.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\word\document.xml
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\fontTable.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\word\fontTable.xml
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\footer1.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\word\footer1.xml
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\header1.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\word\header1.xml
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\numbering.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\word\numbering.xml
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\settings.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\word\settings.xml
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\styles.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\word\styles.xml
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\webSettings.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\word\webSettings.xml
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\theme\theme1.xml -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\word\theme\theme1.xml
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\word\_rels\document.xml.rels -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\word\_rels\document.xml.rels
+C:\Apps\Sandcastle\PresentationStyles\OpenXML\DocumentParts\_rels\rels.xml.rels -&gt; C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Working\Output\OpenXml\_rels\rels.xml.rels
+    Last step completed in 00:00:00,3100
+</buildStep>
+<buildStep step="GenerateHelpFormatTableOfContents">
+Executing informational Generate Table of Contents build step for plug-ins (not used for Open XML)
+    Last step completed in 00:00:00,0010
+</buildStep>
+<buildStep step="GenerateHelpProject">
+Executing informational Generate Help Project build step for plug-ins (not used for Open XML)
+    Last step completed in 00:00:00,0010
+</buildStep>
+<buildStep step="CompilingHelpFile">
+Generating Open XML document file...
+[C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe - BuildOpenXmlFile.proj]
+  Finished merging 81 topics
+  30 external hyperlink relationship(s) defined
+  6 image relationship(s) defined
+  0 list numbering style override(s) defined
+  Saving C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Documentation_1.docx...
+  Finished saving C:\Users\AlexNerru\source\repos\HSE\CHW\Documentation_1\Help\Documentation_1.docx
+  Compressed 21 files.  Reduced size by 476я779 bytes (93%).
+    Last step completed in 00:00:01,1700
+</buildStep>
+<buildStep step="CleanIntermediates">
+Removing intermediate files...
+    Last step completed in 00:00:00,0560
+</buildStep>
+<buildStep step="Completed">
+
+Build completed successfully at 19.12.2017 22:36:36.  Total time: 00:00:20,1528
+
+</buildStep>
+</shfbBuild>

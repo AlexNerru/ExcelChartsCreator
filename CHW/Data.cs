@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace CHW
 {
+	/// <summary>
+	/// Class represents data and demonstrates it via gridView
+	/// </summary>
 	public partial class Data : Form
 	{
 		
@@ -24,7 +27,11 @@ namespace CHW
 			dataTable.Visible = true;
 		}
 
-
+		/// <summary>
+		/// Empty method which is called when form has loaded
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
 		private void Data_Load(object sender, EventArgs e)
 		{
 

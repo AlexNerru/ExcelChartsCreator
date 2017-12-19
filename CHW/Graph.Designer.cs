@@ -151,11 +151,34 @@
 
 		#endregion
 
+		/// <summary>
+		/// Represents chart for drawing graph
+		/// </summary>
 		private System.Windows.Forms.DataVisualization.Charting.Chart chart;
+
+		/// <summary>
+		/// Button for closing graph window
+		/// </summary>
 		private System.Windows.Forms.Button buttonCloseGraph;
+
+		/// <summary>
+		/// Listbox which allow to change graph type
+		/// </summary>
 		private System.Windows.Forms.ListBox graphTypeBox;
+
+		/// <summary>
+		/// Listbox which allow to change graph color
+		/// </summary>
 		private System.Windows.Forms.ListBox graphColorBox;
+
+		/// <summary>
+		/// TrackBar element which sets axis x minimum
+		/// </summary>
 		private System.Windows.Forms.TrackBar trackBarMin;
+
+		/// <summary>
+		/// TrackBar element which sets axis x maximum
+		/// </summary>
 		private System.Windows.Forms.TrackBar trackBarMax;
 	}
 }

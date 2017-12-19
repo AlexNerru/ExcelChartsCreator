@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace CHW
 {
+	/// <summary>
+	/// Class which represents the graph, built on two codens of datatable
+	/// </summary>
 	public partial class Graph : Form
 	{
 		/// <summary>

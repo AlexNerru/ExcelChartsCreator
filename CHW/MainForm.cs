@@ -34,10 +34,13 @@ namespace CHW
 		/// </summary>
 		Random rand = new Random();
 
+		/// <summary>
+		/// Public constructor without params
+		/// </summary>
 		public MainForm()
 		{
 			InitializeComponent();
-			GREETINGS_LABEL_TEXT = greetingLabel.Text;
+			GREETINGS_LABEL_TEXT = labelGreetings.Text;
 		}
 
 		/// <summary>
@@ -48,19 +51,19 @@ namespace CHW
 		{
 			buttonClose.Visible = state;
 			buttonOpen.Visible = state;
-			button3.Visible = state;
+			buttonHelp.Visible = state;
 			
 		}
 
 		/// <summary>
 		/// Changes visible property of drawing graph menu items
 		/// </summary>
-		/// <param name="state">true - visible, false - not<</param>
+		/// <param name="state">true - visible, false - not</param>
 		private void ChangeGraphMenuStatus (bool state)
 		{
 			buttonMenu.Visible = state;
 			listBoxX.Visible = state;
-			label3.Visible = state;
+			labelChooseColumns.Visible = state;
 			listBoxY.Visible = state;
 			buttonDraw.Visible = state;
 		}
@@ -76,7 +79,7 @@ namespace CHW
 			timer.Interval = 100;
 			ChangeMenuState(false);
 			ChangeGraphMenuStatus(false);
-			greetingLabel.Text = String.Empty;
+			labelGreetings.Text = String.Empty;
 		}
 
 		/// <summary>
@@ -87,15 +90,15 @@ namespace CHW
 		private void timer_Tick(object sender, EventArgs e)
 		{
 
-			if (greetingLabel.Text.Length < GREETINGS_LABEL_TEXT.Length)
+			if (labelGreetings.Text.Length < GREETINGS_LABEL_TEXT.Length)
 			{
-				greetingLabel.Text = GREETINGS_LABEL_TEXT.Substring(0, greetingLabel.Text.Length + 1);
+				labelGreetings.Text = GREETINGS_LABEL_TEXT.Substring(0, labelGreetings.Text.Length + 1);
 				timer.Interval= rand.Next(50, 150);
 			}
 			else
 			{
 				timer.Enabled = false;
-				greetingLabel.Visible = false;
+				labelGreetings.Visible = false;
 				ChangeMenuState(true);
 			}
 		}		

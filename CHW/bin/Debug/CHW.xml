@@ -1,0 +1,360 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CHW</name>
+    </assembly>
+    <members>
+        <member name="T:CHW.Data">
+            <summary>
+            Class represents data and demonstrates it via gridView
+            </summary>
+        </member>
+        <member name="M:CHW.Data.#ctor(System.Data.DataTable)">
+            <summary>
+            Constructor for data window
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:CHW.Data.Data_Load(System.Object,System.EventArgs)">
+            <summary>
+            Empty method which is called when form has loaded
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.Data.buttonCloseGraph_Click(System.Object,System.EventArgs)">
+            <summary>
+            Event, which is called after clicking "close" button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:CHW.Data.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CHW.Data.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CHW.Data.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:CHW.Data.dataTable">
+            <summary>
+            DataGrid to show provided datatable
+            </summary>
+        </member>
+        <member name="F:CHW.Data.buttonCloseGraph">
+            <summary>
+            Button, which calls event buttonClose
+            </summary>
+        </member>
+        <member name="T:CHW.MainForm">
+            <summary>
+            Main class, which is user for all interactions with user
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm._table">
+            <summary>
+            Table of data which was loaded from file
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.GREETINGS_LABEL_TEXT">
+            <summary>
+            Text of first label
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.rand">
+            <summary>
+            Randomiser
+            </summary>
+        </member>
+        <member name="M:CHW.MainForm.#ctor">
+            <summary>
+            Public constructor without params
+            </summary>
+        </member>
+        <member name="M:CHW.MainForm.ChangeMenuState(System.Boolean)">
+            <summary>
+            Changes visible property of main menu items
+            </summary>
+            <param name="state">true - visible, false - not</param>
+        </member>
+        <member name="M:CHW.MainForm.ChangeGraphMenuStatus(System.Boolean)">
+            <summary>
+            Changes visible property of drawing graph menu items
+            </summary>
+            <param name="state">true - visible, false - not</param>
+        </member>
+        <member name="M:CHW.MainForm.MainForm_Load(System.Object,System.EventArgs)">
+            <summary>
+            Event which is calles immediatly, when form has loaded
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.MainForm.timer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            Timer ticker, which draws "greetings label"
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.MainForm.buttonClose_Click(System.Object,System.EventArgs)">
+            <summary>
+            Event, which calls after clicking "close" button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.MainForm.buttonOpen_Click(System.Object,System.EventArgs)">
+            <summary>
+            Event, which calls after clicking "open" button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.MainForm.openFileDialog_FileOk(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Event, which calls when user clicks "ok" button in open file dialog
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.MainForm.LoadFile(System.String)">
+            <summary>
+            Loads chosen Excel file
+            </summary>
+            <param name="filePath"></param>
+            <returns>Names of colums which has numeric values</returns>
+        </member>
+        <member name="M:CHW.MainForm.GetNumericColumnsNames(System.Data.DataTable)">
+            <summary>
+            Creates list of names of numeric type colums
+            </summary>
+            <param name="dataTable"></param>
+            <returns>list of string names</returns>
+        </member>
+        <member name="M:CHW.MainForm.IsNumericType(System.Type)">
+            <summary>
+            Checks if Type object is numeric
+            </summary>
+            <param name="type"></param>
+            <returns>true if type is numeric, false if not</returns>
+        </member>
+        <member name="M:CHW.MainForm.buttonToMenu_Click(System.Object,System.EventArgs)">
+            <summary>
+            Shows main menu and hides graph menu
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.MainForm.buttonDraw_Click(System.Object,System.EventArgs)">
+            <summary>
+            Creates new Graph object from a table and shows it
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.MainForm.buttonHelp_Click(System.Object,System.EventArgs)">
+            <summary>
+            Shows help and hides main menu
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.MainForm.buttonHelpToMenu_Click(System.Object,System.EventArgs)">
+            <summary>
+            Hides labelHelp and shows main menu
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:CHW.MainForm.components">
+            <summary>
+            Обязательная переменная конструктора.
+            </summary>
+        </member>
+        <member name="M:CHW.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Освободить все используемые ресурсы.
+            </summary>
+            <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        </member>
+        <member name="M:CHW.MainForm.InitializeComponent">
+            <summary>
+            Требуемый метод для поддержки конструктора — не изменяйте 
+            содержимое этого метода с помощью редактора кода.
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.timer">
+            <summary>
+            Timer for drawing Greetings Label
+            </summary>
+        </member>
+        <member name="F:CHW.MainForm.greetingLabel">
+            <summary>
+            Label which is shown to greet user
+            </summary>
+        </member>
+        <member name="T:CHW.Graph">
+            <summary>
+            Class which represents the graph, built on two codens of datatable
+            </summary>
+        </member>
+        <member name="F:CHW.Graph.INDEX_OF_FIRST_VALID_EL">
+            <summary>
+            Const to avoid "strange numbers in code"
+            </summary>
+        </member>
+        <member name="F:CHW.Graph._table">
+            <summary>
+            Data for drawing a graph
+            </summary>	
+        </member>
+        <member name="F:CHW.Graph._indexX">
+            <summary>
+            Index of column with x coordinates
+            </summary>
+        </member>
+        <member name="F:CHW.Graph._indexY">
+            <summary>
+            Index of column with y coordinates
+            </summary>
+        </member>
+        <member name="F:CHW.Graph._min">
+            <summary>
+            Index of min element in column, which will be shown on graph
+            </summary>
+        </member>
+        <member name="F:CHW.Graph._max">
+            <summary>
+            Index of max element in column, which will be shown on graph
+            </summary>
+        </member>
+        <member name="F:CHW.Graph.graphNames">
+            <summary>
+            Dictionary which is used to  store string names of graph types
+            </summary>
+        </member>
+        <member name="F:CHW.Graph.graphColors">
+            <summary>
+            Dictionary which is used to store string names of colors
+            </summary>
+        </member>
+        <member name="M:CHW.Graph.#ctor(System.Data.DataTable,System.Int32,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="table">Data for graph</param>
+            <param name="indexX">Index of column whick will be used as X values</param>
+            <param name="indexY">Index of column whick will be used as Y values</param>
+        </member>
+        <member name="M:CHW.Graph.Graph_Load(System.Object,System.EventArgs)">
+            <summary>
+            Event, called after loading a form, using to customise form and graph
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.Graph.buttonCloseGraph_Click(System.Object,System.EventArgs)">
+            <summary>
+            Event, which is called after clicking "close" button
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.Graph.listBox1_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Event to change graph type
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.Graph.graphColorBox_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Event to change graph color
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.Graph.DrawGraph(System.Int32,System.Int32)">
+            <summary>
+            Redraw graph
+            </summary>
+            <param name="min">index of min value X in column (index of min row)</param>
+            <param name="max">index of max value X in column (index of min row)</param>
+        </member>
+        <member name="M:CHW.Graph.MaxX">
+            <summary>
+            Findes maximum element in column X
+            </summary>
+            <returns>element with max value</returns>
+        </member>
+        <member name="M:CHW.Graph.MinX">
+            <summary>
+            Findes minimum element in column X
+            </summary>
+            <returns>element with min x value</returns>
+        </member>
+        <member name="M:CHW.Graph.trackBarMin_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Event,is called, when trackBar for min value value changes
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:CHW.Graph.trackBarMax_ValueChanged(System.Object,System.EventArgs)">
+            <summary>
+            Event,is called, when trackBar for max value value changes
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:CHW.Graph.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:CHW.Graph.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:CHW.Graph.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:CHW.Program.Main">
+            <summary>
+            Главная точка входа для приложения.
+            </summary>
+        </member>
+        <member name="T:CHW.Properties.Resources">
+            <summary>
+              Класс ресурсов со строгим типом для поиска локализованных строк и пр.
+            </summary>
+        </member>
+        <member name="P:CHW.Properties.Resources.ResourceManager">
+            <summary>
+              Возврат кэшированного экземпляра ResourceManager, используемого этим классом.
+            </summary>
+        </member>
+        <member name="P:CHW.Properties.Resources.Culture">
+            <summary>
+              Переопределяет свойство CurrentUICulture текущего потока для всех
+              подстановки ресурсов с помощью этого класса ресурсов со строгим типом.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -81,7 +81,14 @@
 
 		#endregion
 
+		/// <summary>
+		/// DataGrid to show provided datatable
+		/// </summary>
 		private System.Windows.Forms.DataGridView dataTable;
+
+		/// <summary>
+		/// Button, which calls event buttonClose
+		/// </summary>
 		private System.Windows.Forms.Button buttonCloseGraph;
 	}
 }

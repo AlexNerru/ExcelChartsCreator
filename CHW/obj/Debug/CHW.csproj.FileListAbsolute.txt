@@ -11,3 +11,4 @@ C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\obj\Debug\CHW.csproj.ResolveComRefer
 C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\obj\Debug\CHW.Data.resources
 C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\obj\Debug\CHW.Graph.resources
 C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\obj\Debug\CHW.MainForm.resources
+C:\Users\AlexNerru\source\repos\HSE\CHW\CHW\bin\Debug\CHW.xml

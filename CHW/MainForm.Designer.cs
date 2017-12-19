@@ -31,44 +31,36 @@
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.timer = new System.Windows.Forms.Timer(this.components);
-			this.greetingLabel = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
+			this.labelGreetings = new System.Windows.Forms.Label();
 			this.buttonClose = new System.Windows.Forms.Button();
 			this.buttonOpen = new System.Windows.Forms.Button();
-			this.button3 = new System.Windows.Forms.Button();
+			this.buttonHelp = new System.Windows.Forms.Button();
 			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
 			this.buttonMenu = new System.Windows.Forms.Button();
 			this.listBoxX = new System.Windows.Forms.ListBox();
 			this.listBoxY = new System.Windows.Forms.ListBox();
-			this.label3 = new System.Windows.Forms.Label();
+			this.labelChooseColumns = new System.Windows.Forms.Label();
 			this.buttonDraw = new System.Windows.Forms.Button();
 			this.labelHelp = new System.Windows.Forms.Label();
 			this.buttonHelpToMenu = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// timer2
+			// timer
 			// 
 			this.timer.Tick += new System.EventHandler(this.timer_Tick);
 			// 
-			// label1
+			// labelGreetings
 			// 
-			this.greetingLabel.AutoSize = true;
-			this.greetingLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.greetingLabel.Font = new System.Drawing.Font("Segoe Script", 25F);
-			this.greetingLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.greetingLabel.Location = new System.Drawing.Point(234, 548);
-			this.greetingLabel.Name = "label1";
-			this.greetingLabel.Size = new System.Drawing.Size(2543, 399);
-			this.greetingLabel.TabIndex = 0;
-			this.greetingLabel.Text = "Добро пожаловать!\r\nЭто КДЗ Карпина Александра Николаевича БПИ176.\r\nНадеюсь, Вам п" +
+			this.labelGreetings.AutoSize = true;
+			this.labelGreetings.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.labelGreetings.Font = new System.Drawing.Font("Segoe Script", 25F);
+			this.labelGreetings.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.labelGreetings.Location = new System.Drawing.Point(234, 548);
+			this.labelGreetings.Name = "labelGreetings";
+			this.labelGreetings.Size = new System.Drawing.Size(2543, 399);
+			this.labelGreetings.TabIndex = 0;
+			this.labelGreetings.Text = "Добро пожаловать!\r\nЭто КДЗ Карпина Александра Николаевича БПИ176.\r\nНадеюсь, Вам п" +
     "онравится :)\r\n";
-			// 
-			// label2
-			// 
-			this.label2.Location = new System.Drawing.Point(0, 0);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(100, 23);
-			this.label2.TabIndex = 3;
 			// 
 			// buttonClose
 			// 
@@ -98,18 +90,18 @@
 			// 
 			// button3
 			// 
-			this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.button3.Font = new System.Drawing.Font("Segoe Script", 21.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.button3.Location = new System.Drawing.Point(1618, 801);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(656, 230);
-			this.button3.TabIndex = 5;
-			this.button3.Text = "На помощь!";
-			this.button3.UseVisualStyleBackColor = false;
-			this.button3.Click += new System.EventHandler(this.buttonHelp_Click);
+			this.buttonHelp.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.buttonHelp.Font = new System.Drawing.Font("Segoe Script", 21.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.buttonHelp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.buttonHelp.Location = new System.Drawing.Point(1618, 784);
+			this.buttonHelp.Name = "button3";
+			this.buttonHelp.Size = new System.Drawing.Size(656, 230);
+			this.buttonHelp.TabIndex = 5;
+			this.buttonHelp.Text = "На помощь!";
+			this.buttonHelp.UseVisualStyleBackColor = false;
+			this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
 			// 
-			// openFileDialog1
+			// openFileDialog
 			// 
 			this.openFileDialog.FileName = "openFileDialog1";
 			this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_FileOk);
@@ -153,17 +145,17 @@
 			this.listBoxY.TabIndex = 9;
 			this.listBoxY.Visible = false;
 			// 
-			// label3
+			// labelChooseColumns
 			// 
-			this.label3.AutoSize = true;
-			this.label3.Font = new System.Drawing.Font("Segoe Script", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-			this.label3.Location = new System.Drawing.Point(800, 60);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(2496, 127);
-			this.label3.TabIndex = 10;
-			this.label3.Text = "Выберите столбцы, по которым построить графики:";
-			this.label3.Visible = false;
+			this.labelChooseColumns.AutoSize = true;
+			this.labelChooseColumns.Font = new System.Drawing.Font("Segoe Script", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.labelChooseColumns.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.labelChooseColumns.Location = new System.Drawing.Point(800, 60);
+			this.labelChooseColumns.Name = "labelChooseColumns";
+			this.labelChooseColumns.Size = new System.Drawing.Size(2496, 127);
+			this.labelChooseColumns.TabIndex = 10;
+			this.labelChooseColumns.Text = "Выберите столбцы, по которым построить графики:";
+			this.labelChooseColumns.Visible = false;
 			// 
 			// buttonDraw
 			// 
@@ -179,26 +171,26 @@
 			this.buttonDraw.Visible = false;
 			this.buttonDraw.Click += new System.EventHandler(this.buttonDraw_Click);
 			// 
-			// label4
+			// labelHelp
 			// 
 			this.labelHelp.AutoSize = true;
 			this.labelHelp.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.labelHelp.Font = new System.Drawing.Font("Segoe Print", 24.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.labelHelp.ForeColor = System.Drawing.SystemColors.ButtonFace;
 			this.labelHelp.Location = new System.Drawing.Point(78, 60);
-			this.labelHelp.Name = "label4";
+			this.labelHelp.Name = "labelHelp";
 			this.labelHelp.Size = new System.Drawing.Size(3431, 2320);
 			this.labelHelp.TabIndex = 13;
-			this.labelHelp.Text = resources.GetString("label4.Text");
+			this.labelHelp.Text = resources.GetString("labelHelp.Text");
 			this.labelHelp.Visible = false;
 			// 
-			// button1
+			// buttonHelpToMenu
 			// 
 			this.buttonHelpToMenu.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.buttonHelpToMenu.Font = new System.Drawing.Font("Segoe Script", 21.9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.buttonHelpToMenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.buttonHelpToMenu.Location = new System.Drawing.Point(2968, 1741);
-			this.buttonHelpToMenu.Name = "button1";
+			this.buttonHelpToMenu.Name = "buttonHelpToMenu";
 			this.buttonHelpToMenu.Size = new System.Drawing.Size(656, 230);
 			this.buttonHelpToMenu.TabIndex = 14;
 			this.buttonHelpToMenu.Text = "В меню!";
@@ -215,15 +207,14 @@
 			this.ClientSize = new System.Drawing.Size(3788, 2072);
 			this.Controls.Add(this.buttonHelpToMenu);
 			this.Controls.Add(this.buttonDraw);
-			this.Controls.Add(this.label3);
+			this.Controls.Add(this.labelChooseColumns);
 			this.Controls.Add(this.listBoxY);
 			this.Controls.Add(this.listBoxX);
 			this.Controls.Add(this.buttonMenu);
-			this.Controls.Add(this.button3);
+			this.Controls.Add(this.buttonHelp);
 			this.Controls.Add(this.buttonOpen);
 			this.Controls.Add(this.buttonClose);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.greetingLabel);
+			this.Controls.Add(this.labelGreetings);
 			this.Controls.Add(this.labelHelp);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "MainForm";
@@ -237,19 +228,69 @@
 
 		#endregion
 
+		/// <summary>
+		/// Timer for drawing Greetings Label
+		/// </summary>
 		private System.Windows.Forms.Timer timer;
-		private System.Windows.Forms.Label greetingLabel;
-		private System.Windows.Forms.Label label2;
+
+		/// <summary>
+		/// Label which is shown to greet user
+		/// </summary>
+		private System.Windows.Forms.Label labelGreetings;
+
+		/// <summary>
+		/// Button to close app
+		/// </summary>
 		private System.Windows.Forms.Button buttonClose;
+
+		/// <summary>
+		/// Button to open file via openFileDialog
+		/// </summary>
 		private System.Windows.Forms.Button buttonOpen;
-		private System.Windows.Forms.Button button3;
+
+		/// <summary>
+		/// Button to show help
+		/// </summary>
+		private System.Windows.Forms.Button buttonHelp;
+
+		/// <summary>
+		/// OpenFileDialog to work with files
+		/// </summary>
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
+
+		/// <summary>
+		/// Button to return to menu
+		/// </summary>
 		private System.Windows.Forms.Button buttonMenu;
+
+		/// <summary>
+		/// ListBox for names of X columns
+		/// </summary>
 		private System.Windows.Forms.ListBox listBoxX;
+
+		/// <summary>
+		/// ListBox for names of Y column
+		/// </summary>
 		private System.Windows.Forms.ListBox listBoxY;
-		private System.Windows.Forms.Label label3;
+
+		/// <summary>
+		/// Shows information that user need to choose columns for x and y
+		/// </summary>
+		private System.Windows.Forms.Label labelChooseColumns;
+		
+		/// <summary>
+		/// Is used to call drawGraph event
+		/// </summary>
 		private System.Windows.Forms.Button buttonDraw;
+
+		/// <summary>
+		/// Contains help information
+		/// </summary>
 		private System.Windows.Forms.Label labelHelp;
+
+		/// <summary>
+		/// Button to returm to main menu
+		/// </summary>
 		private System.Windows.Forms.Button buttonHelpToMenu;
 	}
 }
