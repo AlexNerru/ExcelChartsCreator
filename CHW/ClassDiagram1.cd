@@ -20,7 +20,7 @@
   <Class Name="CHW.MainForm">
     <Position X="5.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAIBRACEAAhAIAACIQIACAAAqoAAAAHQIIACpBAA=</HashCode>
+      <HashCode>AAQAAIBRACkAAhAIAACIUIACAAgiwEBAAAAAIAChRAA=</HashCode>
       <FileName>MainForm.cs</FileName>
     </TypeIdentifier>
   </Class>
